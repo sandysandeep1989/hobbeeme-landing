@@ -25,7 +25,7 @@ export default function Footer() {
             <li><Link href="/plan-a-event">Events</Link></li>
             <li><Link href="/classes">Classes</Link></li>
             <li><Link href="/experience">Experience</Link></li> */}
-            <li><Link href="/offer-services">Offer Services</Link></li> 
+            <li><Link href="/offer-landing">Offer Services</Link></li> 
             <li><Link href="/term-and-condition">Terms & Conditions</Link></li>
           </ul>
         </div>

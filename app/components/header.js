@@ -442,7 +442,7 @@ export default function Header() {
 
           <div className={styles.mobileMenuItem}>
             <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/plan-a-event'>Plan An Event</Link></div>
-            <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/offer-services'>Offer Services</Link></div>
+            <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/offer-landing'>Offer Services</Link></div>
             {/* <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/gift-card'>Gift Card </Link></div> */}
 
           </div>
