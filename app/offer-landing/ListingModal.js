@@ -29,10 +29,18 @@ export default function ListingModal({ show, onHide }) {
     });
     const [selectedCategory, setSelectedCategory] = useState('');
     const [acceptTerms, setAcceptTerms] = useState(false);
-    const [formData, setFormData] = useState({ name: '', email: '', contact: '', businessName: '' });
+    const [formData, setFormData] = useState({ 
+        name: '', 
+        email: '', 
+        contact: '', 
+        businessName: '',
+        businessId: '',
+        socialMediaLink: ''
+    });
     const [loading, setLoading] = useState(false);
     const [submitted, setSubmitted] = useState(false);
     const [errors, setErrors] = useState({});
+    const [hasLicense, setHasLicense] = useState(false);
 
     useEffect(() => {
         if (Object.keys(errors).length > 0) {
@@ -69,7 +77,15 @@ export default function ListingModal({ show, onHide }) {
             });
             setSelectedCategory('');
             setAcceptTerms(false);
-            setFormData({ name: '', email: '', contact: '', businessName: '' });
+            setHasLicense(false);
+            setFormData({ 
+                name: '', 
+                email: '', 
+                contact: '', 
+                businessName: '',
+                businessId: '',
+                socialMediaLink: ''
+            });
             setLoading(false);
             setSubmitted(false);
             setErrors({});
@@ -94,7 +110,10 @@ export default function ListingModal({ show, onHide }) {
         if (!formData.email.trim()) newErrors.email = 'Email is required';
         if (!formData.contact.trim()) newErrors.contact = 'Contact number is required';
         if (!formData.businessName.trim()) newErrors.businessName = 'Business name is required';
+        if (!formData.businessId.trim()) newErrors.businessId = 'Business/Freelancer ID is required';
+        if (!formData.socialMediaLink.trim()) newErrors.socialMediaLink = 'Social media link is required';
         if (!selectedCategory) newErrors.category = 'Category is required';
+        if (!hasLicense) newErrors.license = 'You must confirm you hold the necessary license(s)';
 
         // Email regex validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -133,7 +152,10 @@ export default function ListingModal({ show, onHide }) {
             services,
             serviceDescriptions,
             category: selectedCategory,
-            acceptTerms
+            hasLicense,
+            acceptTerms,
+            businessId: formData.businessId,
+            socialMediaLink: formData.socialMediaLink
         };
 
         try {
@@ -246,6 +268,9 @@ export default function ListingModal({ show, onHide }) {
                             </Col>
                         </Row>
 
+                        {/* Business ID & Social Media Link */}
+                     
+
                         {/* Services Section */}
                         <Form.Group className={`mb-3 ${styles.formGroup}`}>
                             <Form.Label className={styles.formLabel}><strong>What all services you want to list with us?</strong></Form.Label>
@@ -293,6 +318,48 @@ export default function ListingModal({ show, onHide }) {
                                 />
                                 {errors.category && <div className={styles.error}>{errors.category}</div>}
                             </div>
+                        </Form.Group>
+
+                        <Row className="mb-3">
+                            <Col>
+                                <Form.Group className={styles.formGroup}>
+                                    <Form.Label className={styles.formLabel}>Provide Business/Freelancer/ID</Form.Label>
+                                    <Form.Control
+                                        className={styles.formInput}
+                                        type="text"
+                                        name="businessId"
+                                        placeholder="Provide Business/Freelancer/ID"
+                                        onChange={handleChange}
+                                    />
+                                    {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
+                                </Form.Group>
+                            </Col>
+                            <Col>
+                                <Form.Group className={styles.formGroup}>
+                                    <Form.Label className={styles.formLabel}>Enter your social media link</Form.Label>
+                                    <Form.Control
+                                        className={styles.formInput}
+                                        type="text"
+                                        name="socialMediaLink"
+                                        placeholder="Provide Instagram/Facebook/Link"
+                                        onChange={handleChange}
+                                    />
+                                    {errors.socialMediaLink && <div className={styles.error}>{errors.socialMediaLink}</div>}
+                                </Form.Group>
+                            </Col>
+                        </Row>
+                        
+
+                        {/* License Checkbox */}
+                        <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
+                            <CustomCheckbox
+                                checked={hasLicense}
+                                onChange={() => setHasLicense(!hasLicense)}
+                            />
+                            <label className={`${styles.formLabel} ms-2`}>
+                                I hold the necessary license/s to Teach, Host or Conduct the listed services in UAE
+                            </label>
+                            {errors.license && <div className={styles.error}>{errors.license}</div>}
                         </Form.Group>
 
                         {/* Terms & Conditions */}

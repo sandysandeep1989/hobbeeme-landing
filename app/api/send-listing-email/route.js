@@ -13,11 +13,20 @@ export async function POST(req) {
             services,
             serviceDescriptions,
             category,
-            acceptTerms
+            acceptTerms,
+            businessId,
+            socialMediaLink,
+            hasLicense
         } = body;
 
         if (!acceptTerms) {
             return new Response(JSON.stringify({ error: 'Terms must be accepted' }), {
+                status: 400,
+            });
+        }
+
+        if (!hasLicense) {
+            return new Response(JSON.stringify({ error: 'License confirmation is required' }), {
                 status: 400,
             });
         }
@@ -36,7 +45,10 @@ Name: ${name}
 Email: ${email}
 Contact: ${contact}
 Business: ${businessName}
+Business/Freelancer ID: ${businessId}
+Social Media Link: ${socialMediaLink}
 Category: ${category}
+License Confirmed: ${hasLicense ? 'Yes' : 'No'}
 
 Selected Services and Descriptions:
 ${servicesList}
