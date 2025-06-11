@@ -73,10 +73,11 @@
   .section li {
     font-size: 12px;
   }
+
+  .accountPage{
+    margin-bottom: 0;
+  }
 }
 
 
-@media (max-width:767px) {
 
-
-}
