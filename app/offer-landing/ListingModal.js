@@ -324,7 +324,7 @@ export default function ListingModal({ show, onHide }) {
                         <Row className="mb-3">
                         <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Provide Business/Freelancer/ID</Form.Label>
+                                    <Form.Label className={styles.formLabel}>Provide UAE Business/Freelancer/ID</Form.Label>
                                     <Form.Control
                                         className={styles.formInput}
                                         type="text"
