@@ -236,3 +236,16 @@
     color: #8a7ff0;
     text-decoration: underline;
 }
+
+
+@media(max-width: 767px){
+    .formGroup{
+        margin-bottom: 12px;
+        align-items: baseline !important;
+    }
+
+    .customModal :global(.modal-content) {
+        padding: 16px;
+    }
+
+}

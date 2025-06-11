@@ -211,7 +211,7 @@ export default function ListingModal({ show, onHide }) {
                     <Form onSubmit={handleSubmit} noValidate>
                         {/* Name & Email */}
                         <Row className="mb-3">
-                            <Col>
+                            <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Name</Form.Label>
                                     <Form.Control
@@ -224,7 +224,7 @@ export default function ListingModal({ show, onHide }) {
                                     {errors.name && <div className={styles.error}>{errors.name}</div>}
                                 </Form.Group>
                             </Col>
-                            <Col>
+                            <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Email</Form.Label>
                                     <Form.Control
@@ -241,7 +241,7 @@ export default function ListingModal({ show, onHide }) {
 
                         {/* Contact & Business Name */}
                         <Row className="mb-3">
-                            <Col>
+                        <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Contact Number</Form.Label>
                                     <Form.Control
@@ -254,7 +254,7 @@ export default function ListingModal({ show, onHide }) {
                                     {errors.contact && <div className={styles.error}>{errors.contact}</div>}
                                 </Form.Group>
                             </Col>
-                            <Col>
+                            <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Business Name</Form.Label>
                                     <Form.Control
@@ -322,7 +322,7 @@ export default function ListingModal({ show, onHide }) {
                         </Form.Group>
 
                         <Row className="mb-3">
-                            <Col>
+                        <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Provide Business/Freelancer/ID</Form.Label>
                                     <Form.Control
@@ -335,7 +335,7 @@ export default function ListingModal({ show, onHide }) {
                                     {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
                                 </Form.Group>
                             </Col>
-                            <Col>
+                            <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Enter your social media link</Form.Label>
                                     <Form.Control

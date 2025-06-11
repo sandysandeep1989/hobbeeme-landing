@@ -397,7 +397,7 @@ export default function Header() {
         </button>
 
         <div className={menu ? `${styles.mobileMenu} ${styles.active}` : styles.mobileMenu}>
-          <div className={styles.mobileMenuItem}>
+          {/* <div className={styles.mobileMenuItem}>
             <div className={styles.head} onClick={() => menuFuc('classes')}>Classes <span className={subMeun === 'classes' ? styles.active : ''}><ArrowDownMenu /></span></div>
             <ul className={subMeun === 'classes' ? styles.active : ''}>
               <li><Link href='' onClick={() => menuSubFuc('ART & CRAFTS')}> ART & CRAFTS <span>{subSubMenu === 'ART & CRAFTS' ? '-' : '+'}</span></Link>
@@ -438,19 +438,19 @@ export default function Header() {
 
 
             </ul>
-          </div>
+          </div> */}
 
           <div className={styles.mobileMenuItem}>
             <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/plan-a-event'>Plan An Event</Link></div>
             <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/offer-services'>Offer Services</Link></div>
-            <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/gift-card'>Gift Card </Link></div>
+            {/* <div className={styles.head} ><Link onClick={() => { menuClose() }} href='/gift-card'>Gift Card </Link></div> */}
 
           </div>
 
 
-          <div className={`${styles.menuBtn} ${styles.mobileMain}`}>
+          {/* <div className={`${styles.menuBtn} ${styles.mobileMain}`}>
             <Link href='/login'>Log In <MenuArrow></MenuArrow></Link>
-          </div>
+          </div> */}
 
         </div>
 

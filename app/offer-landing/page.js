@@ -74,12 +74,12 @@ export default function OfferLanding() {
                                 memorable moments — <strong>Hobbeeme is your platform to shine and earn.</strong></p>
 
                             <div className={styles.buttonWrapping}>
-                                <button onClick={() => setIsModalOpen(true)} className={`${styles.aboutBtn} ${styles.MobileHide}`}>BECOME A PARTNER <span><ArrowDown /></span></button>
+                                <button onClick={() => setIsModalOpen(true)} className={`${styles.aboutBtn} `}>BECOME A PARTNER <span><ArrowDown /></span></button>
                                 <a
                                     href="https://calendly.com/jhankaragarwal91/30min?month=2025-06"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`${styles.learnMoreBtn} ${styles.MobileHide}`}
+                                    className={`${styles.learnMoreBtn} `}
                                 >
                                     <div className={styles.learnMoreText}>
                                         Learn More <span className={styles.SmallText}>Join our upcoming webinar</span>
@@ -92,7 +92,7 @@ export default function OfferLanding() {
 
                     <div className={`${styles.hobeList} row text-white text-center `}>
                         {features.map((feat, i) => (
-                            <div className={`col-md-3 mb-4 col-6 ${styles.cardMinWidth}`} key={i}>
+                            <div className={`col-md-3 mb-4 col-sm-6 ${styles.cardMinWidth}`} key={i}>
                                 <div className={styles.featureCard}>
                                     {feat.title === 'EXPAND YOUR REACH' && <ExpandIcon />}
                                     {feat.title === 'ADDITIONAL INCOME' && <AdditionalIcon />}

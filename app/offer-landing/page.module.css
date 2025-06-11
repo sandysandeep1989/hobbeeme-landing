@@ -435,22 +435,35 @@ text-transform: uppercase;
         width: 39px;
     } */
 
-    .aboutBtn span svg {
+    /* .aboutBtn span svg {
         width: 16px;
         height: 16px;
     }
 
+    .learnMoreBtn span svg{
+        width: 16px;
+        height: 16px;
+    } */
+
     .blobImg {
-        width: 100%;
+        max-width: 100%;
     }
 
     .readyToShare img {
         min-height: 400px;
     }
+
+
 }
 
 
 @media (max-width: 767px) {
+    .planTag{
+       display: flex;
+       justify-content: center;
+       max-width: fit-content;
+       margin:20px auto;
+    }
     .ParaText {
         margin-top: 16px;
     }
@@ -480,14 +493,14 @@ text-transform: uppercase;
         text-align: center;
     }
 
-    .blobImg {
+    /* .blobImg {
         width: 100%;
-    }
+    } */
 
-    .aboutBtn {
+    /* .aboutBtn {
         font-size: 16px;
         height: 40px;
-    }
+    } */
 
     .featureCard {
         padding: 20px;
@@ -555,7 +568,7 @@ text-transform: uppercase;
         margin-bottom: 5px;
     }
 
-    .aboutBtn span {
+    /* .aboutBtn span {
         height: 37px;
         width: 37px;
     }
@@ -563,13 +576,14 @@ text-transform: uppercase;
     .aboutBtn span svg {
         width: 16px;
         height: 16px;
-    }
+    } */
 
     .aboutBtn {
         font-size: 14px;
         margin-top: 0;
 
     }
+    
 
     .readyPic {
         height: 200px;
@@ -587,4 +601,26 @@ text-transform: uppercase;
         min-height: 250px;
     }
 
+    .buttonWrapping{
+        flex-direction: row;
+    }
+    .learnMoreBtn {
+        margin-top: 0;
+        font-size: 12px;
+    }
+    .blobImg{
+        max-width: 100%;
+        max-height: 300px;
+        height: 100%;
+    }
+
+}
+
+
+@media(max-width: 540px) {
+    .buttonWrapping{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
