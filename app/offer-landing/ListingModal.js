@@ -5,6 +5,7 @@ import CustomCheckbox from '../components/CustomCheckbox';
 import CustomDropdown from '../classes/course-detail/CustomDropDown';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Link from 'next/link';
 
 export default function ListingModal({ show, onHide }) {
     const [services, setServices] = useState({
@@ -368,7 +369,9 @@ export default function ListingModal({ show, onHide }) {
                                 checked={acceptTerms}
                                 onChange={() => setAcceptTerms(!acceptTerms)}
                             />
-                            <label className={`${styles.formLabel} ms-2`}>I accept Terms and Conditions</label>
+                            <label className={`${styles.formLabel} ms-2`}>
+                                I accept <Link href="/term-and-condition" target="_blank" rel="noopener noreferrer" className={styles.termsLink}>Terms and Conditions</Link>
+                            </label>
                             {errors.terms && <div className={styles.error}>{errors.terms}</div>}
                         </Form.Group>
 
