@@ -1,0 +1,159 @@
+.cardGrid {
+    display: flex;
+    gap: 24px;
+}
+
+.cardContainer {
+    overflow: hidden;
+    transition: transform 0.3s;
+    padding: 8px;
+    border-radius: 20px;
+    background: #1A1D1F;
+}
+
+
+
+.cardImageWrapper {
+    position: relative;
+}
+
+.cardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.rating {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #FFF;
+    color: var(--Heading, #272727);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16.8px;
+    padding: 2px 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.heart {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.50);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    top: 9px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.flexCardDetail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tag {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    color: #FFAFAF;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    width: 100%;
+    text-align: end;
+    background: linear-gradient(90deg, rgba(1, 1, 1, 0.00) 0%, #000 100%);
+}
+
+.cardContent {
+    padding: 12px 8px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.category {
+    background-color: #333;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.eventTitle {
+    color: #BFBFBF;
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.venue {
+    color: #FFF;
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 12px;
+}
+
+.pricing {
+    display: flex;
+    align-items: end;
+    gap: 4px;
+}
+
+.currentPrice {
+    color: #FEE94F;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.originalPrice {
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: line-through;
+    text-transform: capitalize;
+    padding-bottom: 1px;
+}
+
+.discount {
+    color: #FFF;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    padding: 4px 6px;
+    border-radius: 9999px;
+    background: #644EE5;
+
+}

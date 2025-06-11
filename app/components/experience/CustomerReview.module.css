@@ -1,0 +1,168 @@
+.customerReviewHead {
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: unset;
+    margin-bottom: 32px;
+}
+
+.reviewSummary {
+    text-align: left;
+}
+
+.rating {
+    align-items: center;
+}
+
+.ratingNumber {
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+
+.ratingCount {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.starRating {
+    display: flex;
+
+}
+
+.ratingDistribution {
+    text-align: left;
+}
+
+.ratingRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.ratingRow span {
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.progressBar {
+    flex-grow: 1;
+    height: 6px;
+    border-radius: 1332px;
+    background: var(--Color-Light-950, #242528);
+}
+
+.progressBar :global(.progress-bar) {
+    background-color: #644EE5 !important;
+}
+
+.reviewCard {
+    margin-top: 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 21px;
+    border-bottom: 1.333px solid var(--Color-Light-950, #242528);
+
+}
+
+
+
+.reviewActions span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.userImage {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.userId {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 10px;
+}
+
+.reviewImages {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.reviewImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.reviewText {
+    margin-bottom: 12px;
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 6px;
+}
+
+.reviewActions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: #888;
+}
+
+.ratingBadge {
+    border-radius: 8px;
+    background: var(--Yellow, #FEEA4F);
+    color: var(--Black, #000);
+    text-align: center;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.4px;
+    padding: 4px 5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.showMore {
+    text-align: center;
+    margin-top: 20px;
+    color: #6A5ACD;
+    cursor: pointer;
+}

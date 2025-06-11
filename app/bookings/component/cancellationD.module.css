@@ -1,0 +1,393 @@
+.bookingTabs {
+  width: 100%;
+  color: white;
+  position: relative;
+}
+
+.tabHeader {
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #444;
+}
+
+.tab {
+  width: 50%;
+  text-align: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #818181;
+  transition: color 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.tab:hover {
+  color: #FEEA4F;
+}
+
+.tabIndicator {
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background-color: #FEEA4F;
+  transition: all 0.3s ease;
+  z-index: 0;
+}
+
+.tabContent {
+  padding-top: 20px;
+}
+
+
+
+/* -----table csss */
+
+
+.container {
+  padding: 2rem;
+
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.headerRow {
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px !important;
+ background-color: #18191B;
+  
+
+
+}
+
+.theadWrapper {
+  background-color: #18191B;
+  border-radius: 12px;
+  overflow: hidden;
+ border-radius: 12px !important; 
+}
+
+.row {
+  font-size: 15px;
+}
+
+.th {
+  text-align: left;
+  padding: 12px 16px;
+      border-top: 1px solid #2F2F2F;
+    border-bottom: 1px solid #2F2F2F;
+     padding-right: 76px;
+  
+ 
+
+}
+
+.headerRow th:first-child {
+    border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-left: 1px solid #2F2F2F;
+}
+.headerRow th:last-child {
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+    border-right: 1px solid #2F2F2F;
+}
+
+.td {
+  padding: 18px 0;
+  padding-left: 16px;
+  padding-right: 76px;
+  
+}
+
+.textRight {
+  text-align: right;
+}
+
+
+/* ---details css */
+
+.detailsComnCell{
+    border: 1.33px solid #242528;
+    border-radius: 16px;
+    padding: 24px;
+}
+.detailsComnCell h4{
+    /* font-family: oswald; */
+    font-family: var(--font-oswald); 
+font-weight: 500;
+font-size: 18px;
+line-height: 120%;
+color: #FFFFFF80;
+}
+.detailsFirstRowSecCol h4{
+    margin-bottom: 0px;
+}
+.attendeDiv{
+    margin-top: 12px;
+}
+.cmnBussType{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+.cmnBussTypeHead{ display: flex;
+    justify-content: space-between;}
+.cmnBussTypeHead{margin-bottom: 10px;}
+.cmnBussTypeHead span{font-family: var(--font-oswald); font-size: 18px; font-weight: 500; }
+
+.bussTypetd{font-size: 14px; font-weight: 300; color: #D1D1D1; opacity: 60%;}
+.bussTypeSectd{font-size: 14px; font-weight: 500; color: #D1D1D1;}
+.vanueLocation{display: flex; justify-content: space-between; margin-top: 9px; }
+.vanueLocationInner{font-size: 14px; line-height: 1.2;}
+.vanueLocation img{margin-right: 13px;}
+.viewOnMap{color: #FEEA4F; font-size: 13px; cursor: pointer; line-height: 1.2;}
+.attendeDiv{display: flex; gap:10px;}
+.attendeDiv h5{margin: 0; font-size: 14px; color: #D1D1D1;}
+.attendeDiv span{color: #D1D1D1; opacity: 60%; font-size: 13px; font-weight: 300;}
+.PaySum{   display: flex;
+    justify-content: space-between;
+    margin-top: 18px;}
+
+    .PaySum span:first-child{
+        font-size: 14px;
+        font-weight: 500;
+    
+    }
+     .PaySum span:last-child{
+        font-size: 16px;
+        font-weight: 600;
+    
+    }
+    .yellowClr{
+        color: #FEEA4F;
+    }
+    .myBokingHeading{display: flex; justify-content: space-between; align-items: center; margin-bottom: 25.5px;}
+    .myBokingHeading h1{margin-bottom: 0px; font-size: 24px;}
+    .myBokingHeading span{color: #EF4444; font-size: 16px; font-weight: 600; cursor: pointer; font-family: var(--font-oswald); }
+    .detailsComnCel{margin-top: 12px;}
+    .secRow{margin-top: 24px;}
+
+
+
+    /* -------delete modal---------------- */
+
+    .deleteModalReasonsCntr{
+        max-width: 597px;
+        background-color: #1A1D1F;
+        padding: 48px;
+        border-radius: 16px;
+
+    }
+    .bee{
+        width: 104px;
+        height: 104px;
+        transform: scaleX(-1);
+
+}
+
+/* 
+.wrapper {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 28px;
+  text-align: center;
+} */
+
+/* .bee {
+  width: 104px;
+  height: 104px;
+  margin-bottom: 1rem;
+} */
+
+.checkboxList {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.checkboxList li {
+  margin-bottom: 16px;
+font-size: 16px;
+color: white;
+display: flex;
+align-items: center;
+
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.cancel {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+
+.next {
+  flex: 1;
+  background-color: #6c47ff;
+  border: none;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+}
+.stepOne h2{
+
+font-weight: 500;
+font-size: 34px;
+line-height: 140%;
+letter-spacing: 0%;
+text-align: center;
+color: white;
+
+}
+.checkbox {
+  appearance: none;        
+  -webkit-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 1.2px solid #2F2F2F;
+  border-radius: 6px;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  margin-right: 13px;
+}
+
+.checkbox:checked {
+  background-color: #2F2F2F;
+}
+
+.checkbox:checked::after {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  left: 4px;
+  color: white;
+  font-size: 16px;
+}
+
+/* ----------delete step--------- */
+.deleteBtns{
+    display: flex;
+    justify-content: space-between;
+    gap:4%;
+}
+.deleteBtns .cencel{
+    flex: 1;
+  background: transparent;
+  border: 1px solid #2F2F2F;
+  color: #fff;
+ padding: 7px 11px;
+  border-radius: 8px;
+
+}
+.deleteBtns .yesCencel{
+    flex: 1;
+  background: #EF4444;
+
+  color: #fff;
+  padding: 7px 11px;
+  border: none;
+
+  border-radius: 8px;
+
+}
+.stepTwo .areYouSure{
+    max-width: 250px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+ 
+
+}
+.areYouSure h3{
+  color: #FFF;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.stepContent h2{
+  color: var(--White, #FFF);
+text-align: center;
+font-family: Poppins;
+font-size: 34px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 47.6px */
+}
+
+
+.stepWrapper {
+  position: relative;
+  transition: height 0.3s ease-in-out;
+}
+
+.stepContent {
+  animation: fadeSlideIn 0.3s ease-in-out;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width:1200px) {
+.detailsComnCell{
+  padding: 12px;
+}
+.td{padding: 18px 16px;}
+.th{padding: 12px 16px;}
+  
+}
+
+@media (max-width:991px) {
+  .Batch{width: 112px;}
+  .vanueLocationInner{font-size: 12px;}
+  .PaySum span:last-child{font-size: 14px;} 
+  .PaySum span:first-child{font-size: 12px;}
+  .bussTypetd{font-size: 12px;}
+  .bussTypeSectd{font-size: 12px;} 
+
+  
+}
+
+@media (max-width:767px) {
+  .detailsComnCellM{margin-top: 12px;}
+   .Batch{width: unset;}
+    .PaySum span:last-child{font-size: 16px;} 
+  .PaySum span:first-child{font-size: 14px;}
+    .bussTypetd{font-size: 14px;}
+      .bussTypeSectd{font-size: 14px;}
+      .vanueLocationInner{font-size: 14px;} 
+      .stepOne h2{font-size: 24px;}
+      .deleteModalReasonsCntr{padding: 24px;}
+  
+}
+

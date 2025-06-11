@@ -1,0 +1,12 @@
+
+.page{
+    background: var(--dark, #0E0F11);
+    min-height: 100vh;
+}
+.bookingClientWrapper{
+    max-width: 1346px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+

@@ -1,0 +1,22 @@
+.footervendor {
+  height: 11.85vh;
+  background-color:white;
+  padding-right: 2.5rem;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #E2E8F0;
+  align-items: center;
+}
+.vendorfooterBtn {
+  width: 120px;
+  display: flex; /* Required for gap */
+  align-items: center; /* Center vertically */
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background-color: #644EE5;
+  border: 0px;
+  cursor: pointer;
+  color: white;
+  height: fit-content;
+}

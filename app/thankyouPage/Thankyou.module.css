@@ -1,0 +1,238 @@
+.thankyouWrapper {
+    background: linear-gradient(180deg, #121826 0%, #000 100%);
+   padding: 140px 0 40px 0;
+    /* Horizontally center */
+    align-items: center;
+}
+
+.title {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    /* 46.8px */
+    letter-spacing: 0.72px;
+    margin-bottom: 14px;
+}
+
+.subtitle {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 136%;
+    /* 21.76px */
+    letter-spacing: 0.32px;
+    margin-bottom: 12px;
+}
+
+.card {
+    border-radius: 24px;
+    background: #1A212E;
+    padding: 16px;
+}
+
+.detailRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.detailRow span {
+    color: #D9D9D9;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 155%;
+    /* 21.7px */
+}
+
+.bookingId {
+    margin-bottom: 6px;
+}
+
+.bookingId span {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 155%;
+    /* 27.9px */
+    letter-spacing: -0.36px;
+}
+
+.success {
+    color: #2FEE62;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
+}
+
+.date {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    /* 22.4px */
+}
+
+.casbackwrapping{
+    margin: 24px 0;
+}
+
+.casbackwrapping h3{
+    color: var(--Color-Netural-White, #FFF);
+text-align: center;
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 132%; /* 31.68px */
+letter-spacing: -0.48px;
+margin-bottom: 8px;
+}
+
+.casbackwrapping p{
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+}
+
+.cashbackBox{
+    border-radius: 24px;
+background: #1A212E;
+position: relative;
+background-image: url('/experience/cuponBg.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+padding: 32px 24px;
+}
+
+.cashbackBox::before{
+    position: absolute;
+    background: linear-gradient(90deg, #06080C 0%, #1A212E 104.77%);
+    left: 0;
+    top: 0;
+    height: 100%;
+    max-width: 304px;
+    width: 100%;
+}
+
+.cashbackBoxText{
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 46px; 
+margin-bottom: 32px;
+}
+
+.cashbackPercent{
+    background: linear-gradient(90deg, #9620FE 0%, #10C1E9 100%);
+background-clip: text;
+text-align: center;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-family: Poppins;
+font-size: 61.2px;
+font-style: normal;
+font-weight: 700;
+line-height: 46px; 
+margin-bottom: 24px;
+}
+
+.cashbackInstruction{
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 26px ; /* */
+}
+
+.downloadButton{
+    color: var(--White, #FFF);
+font-family: Oswald;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+text-transform: uppercase;
+    border-radius: 48px;
+background: var(--Violet, #644EE5);
+border: none;
+padding: 16px 32px;
+width: 100%;
+}
+
+.addDownloadWrapping{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+}
+
+.appButton{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+border: 1px solid var(--Light, #FFF);
+background: var(--Dark, #000);
+}
+
+.downloadText h5{
+    color: var(--Light, #FFF);
+font-family: Poppins;
+font-size: 11.558px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-bottom: 3px;
+}
+
+.downloadText p{
+    color: var(--Light, #FFF);
+font-family: Poppins;
+font-size: 24.496px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -1.715px;
+margin: unset;
+}
+
+@media (max-width:767px) {
+    .thankyouContainerInner{margin-top: 148px;}
+    .title {font-size: 28px; max-width: 300px;margin-left: auto; margin-right: auto;}
+    
+}
+.subtitle{margin-right: auto; max-width: 366px; margin-left: auto;}
+.cashbackBoxText{font-size: 20px; margin-bottom: 0px;}
+.cashbackPercent{font-size: 34px; margin-bottom: 0px;}
+.cashbackInstruction{font-size: 11px;}
+.downloadButton{padding: 16px 12px;}
+.thankyouContainer{padding: 0px 32px;}

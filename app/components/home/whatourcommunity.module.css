@@ -1,0 +1,82 @@
+.WhatOurCommunity{padding: 80px 0; border-top: 0.5px solid #616161;}
+
+.heading{ text-align: center;}
+.heading h4{ font-family: var(--font-oswald); font-weight: 700; font-size: 64px; margin-bottom: 20px; text-transform: uppercase;}
+.heading p{font-size: 20px;}
+
+.sayingBox {border-radius: 16px;
+    background: #644EE5;  width: 525px;
+    padding: 32px;}
+ 
+    .sayingBox  p{width: 100%; text-wrap: wrap;}
+
+ .cont{display: flex; justify-content: space-between; padding: 10px 0; font-size: 20px;}   
+ .cont .name{display: flex; gap: 10px; align-items: center;}
+ .cont .pic{width: 50px; height: 50px; border-radius: 50%; background: #E4E4E4; border: #EDEDED 1.5px solid;}
+ .rating{ height: 50px; display: flex; align-items: center;}
+
+
+
+ .discoverWrapper {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px 0 0;
+}
+
+  .discoverWrapper span svg{ position: relative; top: -5px; margin: 0 20px; width: 40px; height: auto;}
+   
+  .span1,
+  .span2,
+  .span3,
+  .span4 {
+    display: inline-flex;
+    gap: 30px;
+  }
+  
+  .span1, .span2 {
+    animation: marquee 40s linear infinite;
+  }
+  
+  .span2 {
+    animation-delay: 20s;
+  }
+  
+  .span3, .span4 {
+    animation: marquee-reverse 40s linear infinite;
+  }
+  
+  .span4 {
+    animation-delay: 20s;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  @keyframes marquee-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  @media(max-width:767px){
+    .heading h4 {font-size: 32px;}
+    .heading p {font-size: 16px;}
+
+
+    .sayingBox{
+      max-width: 340px;
+      width: 100%;
+    }
+    
+  }

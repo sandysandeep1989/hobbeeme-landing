@@ -1,0 +1,121 @@
+.inputcontainer {
+  background-color: white;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: black;
+}
+.inputinnercontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 32.3%;
+  margin: auto;
+  height: 100%;
+}
+.inputheading {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+}
+.inputfieldtext {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+.inputtitleinner {
+  font-weight: 500;
+  font-size: 14px;
+  color: #1e293b;
+}
+.adsinputdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.placeholderset {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-width: 1px;
+  border: 1px solid #e2e8f0;
+}
+
+.placeholdersetfile {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-width: 1px;
+  border: 1px solid #e2e8f0;
+}
+.fileInputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 500px;
+}
+
+.chooseButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 107px;
+  height: 50px;
+  background-color: #644ee5;
+  color: white;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 999px;
+  user-select: none;
+  font-weight: 500;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.chooseButton:hover {
+  background-color: #0056b3;
+}
+
+/* Hide the native file input but keep it accessible */
+.fileInput {
+  display: none;
+}
+
+.fileNameDisplay {
+  flex-grow: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.uploadlowerinfo {
+  font-weight: 400;
+  font-size: 12px;
+
+  letter-spacing: 0%;
+  color: #64748b;
+}
+.schedulingstyle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e293b;
+}
+.dateinputfeild {
+  display: flex;
+  gap: 1rem;
+}
+.datelabelset {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dateinputbarset {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border-width: 1px;
+  border: 1px solid #e2e8f0;
+  width: 240px;
+}

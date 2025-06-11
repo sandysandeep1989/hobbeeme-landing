@@ -1,0 +1,15 @@
+.createadscontainer {
+  background-color: white;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: black;
+}
+.createadsinner{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 61%;
+    margin: auto;
+    height: 100%;
+}

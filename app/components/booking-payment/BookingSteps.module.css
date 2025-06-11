@@ -1,0 +1,104 @@
+.bookingClientWrapper{
+    max-width: 1346px;
+    margin: auto;
+    padding: 90px 40px 40px 40px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    z-index: 1;
+  }
+  .step > div{
+    color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 160%; /* 25.6px */
+    
+  }
+  
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #2c2c2c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .active {
+    background: var(--Yellow, #FEEA4F); /* Yellow-like color */
+  }
+  
+
+  .step:nth-child(3) .iconWrapper.active svg path,
+  .step:nth-child(5) .iconWrapper.active svg path {
+    stroke: #1A1D1F !important;
+  }
+
+
+  
+  .label {
+    margin-top: 8px;
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .connectorSVG{
+    width: 100%; /* Adjust width as needed */
+    height: 2px;
+    margin: 0 8px;
+    margin-top: -33px;
+  }
+  
+  .connectorPath {
+    stroke-dasharray: 10 10; /* Example: 10px dash, 10px gap */
+    stroke-dashoffset: 562; /* Hide initially, based on viewBox width */
+    transition: stroke-dashoffset 0.7s ease-in-out, stroke 0.7s ease-in-out;
+    stroke: #2F2F2F; /* Base stroke color (grey) */
+  }
+
+  .connectorFilled {
+    stroke-dashoffset: 0;
+    stroke: #f4d03f; /* Color for filled state (yellow) */
+  }
+
+    @media (max-width:1200px) {
+    .bookingClientWrapper {padding: 60px 24px;}
+
+  }
+
+    @media (max-width:991px) {
+
+
+    .bookingClientWrapper{padding: 60px 0px;}
+    .container{padding: 32px;}
+
+  }
+  @media (max-width:767px) {
+    .container{padding: 32px 16px;}
+    
+  }
+  
+
+    
+  
+  
+  

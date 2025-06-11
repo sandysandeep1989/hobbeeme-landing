@@ -1,0 +1,477 @@
+.cardWrapper {
+  background: #1A1D1F;
+  border: #2F2F2F 1px solid;
+  border-radius: 20px;
+}
+
+
+.cardWrapper:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+
+
+.cardWrapper h5 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.coursId {
+  color: #FFFFFF80;
+  font-size: 12px;
+}
+
+.coursName {
+  font-size: 16px;
+  color: #767676;
+  font-weight: 600;
+}
+
+.datefrom {
+  font-size: 11px;
+  color: #FFFFFF;
+}
+
+.upCommingCls {
+  color: #A1A1A1;
+  font-size: 12px;
+}
+
+.classStatus {
+  padding: 7.5px 22px;
+  border-radius: 40px;
+  background-color: red;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.qrBox {
+  background-color: #FFFFFF1A;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 9.5px 7px;
+  max-width: 248px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-top: 16px;
+}
+
+.qrBox span {
+  color: #BD89FF;
+  line-height: 1.2;
+}
+
+.progress {
+  max-width: 250px;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-left: auto;
+}
+
+/* .progress span{text-align: left;} */
+
+.progress span strong {
+  color: #FEEA4F;
+}
+
+.mainContent {
+  background-color: #1A1D1F;
+}
+
+.myBookingHeading {
+  font-family: var(--font-oswald);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+
+/* --enrolments row---- */
+.imageDiv {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.enrolmentRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.enrolmentRow .eritem1 {
+
+  height: 132px;
+
+  /* min-width: 144px; */
+  width: 16.1434%;
+}
+
+.enrolmentRow .eritem2 {
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  /* max-width: 450px; */
+  width: 50.4484%;
+}
+
+.enrolmentRow .eritem3 {
+
+  text-align: end;
+  /* max-width: 250px; */
+  width: 28.0269%;
+}
+
+/* -----enrollments----mobile------- */
+.imageDivM {
+  height: 132px;
+  width: 117px;
+}
+
+.imageDivBokM {
+  width: 117px;
+  height: 98px;
+}
+
+
+
+
+
+/* -----bookings--------- */
+.bookingIdRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookingIdFirst {
+  width: 25%;
+}
+
+.bookingIdSec {
+  width: 28%;
+  justify-content: center;
+}
+
+.bookingIdThird {
+  width: 30%;
+  padding-right: 30px;
+  justify-content: end;
+}
+
+.bookingRow {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.bookingRowItem1 {
+  width: 16.1434%;
+  height: 132px;
+}
+
+.bookingRowItem2 {
+  width: 81.1659%;
+}
+
+.bookingIdThird div {
+  margin-right: 0px;
+}
+
+.organizationName {
+  font-weight: 600;
+  font-size: 20px;
+  vertical-align: middle;
+  max-width: 250px;
+}
+
+.bookingId {
+  display: flex;
+}
+
+.bookingId span {
+  color: #A1A1A1;
+  font-size: 11px;
+}
+
+.bookingId h6 {
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+.bookingIdFirst {
+  justify-content: flex-start;
+}
+
+
+/* ---qr code--- */
+
+/* Example: more specific selector */
+.Modal :global(.modal-content) {
+  background-color: transparent;
+}
+
+
+
+.qrWrapper {
+  position: relative;
+
+  width: max-content;
+
+  overflow: hidden;
+
+
+}
+
+.cardFlexx {
+  display: flex;
+  gap: 10%;
+}
+
+.cardWrapperBtmFlex {
+  display: flex;
+  gap: 30%;
+}
+
+.bgShape {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qrOverlay {
+  width: 90%;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+
+}
+
+.qrOverlaytwo {
+  width: 90%;
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: white;
+  text-align: left;
+
+}
+
+
+.qrImage {
+  width: 198px;
+  height: 198px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 12px;
+  font-weight: 500;
+
+}
+
+.courseId {
+  font-size: 11px;
+  color: #FFFFFF80;
+}
+
+.orgHeading {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.orgHeading span {
+  color: #767676;
+}
+
+.qrbottomData h5 {
+  font-size: 11px;
+}
+
+.qrbottomData span {
+  font-size: 9px;
+  color: #A1A1A1;
+}
+
+.flowerQr {
+  position: absolute;
+  top: 0;
+  left: -2px;
+  overflow: hidden;
+}
+
+.upCommingBg {
+  background-color: #644EE5;
+}
+
+.cancelBg {
+  background-color: #EF4444;
+}
+
+
+
+/* -------toggle css */
+
+
+.filterButton {
+  width: 200px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  padding: 10px 12px;
+  color: #FFF;
+  text-align: center;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+
+}
+
+.IndividualHover:hover .dropdownMenu {
+  display: block;
+  background-color: #644EE5;
+  color: #FFF;
+  transition: all 0.3s ease;
+}
+
+.dropdownItem {
+  padding: 8px 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+}
+
+.dropdownItem:hover {
+  background: #393A3F;
+}
+
+/* ---- */
+
+.tabsflex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+/* ---css for mobile -------------- */
+
+.qrBoxM {
+  background-color: #FFFFFF1A;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 9.5px 7px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-top: 16px;
+}
+
+.qrBoxM span {
+  color: #BD89FF;
+}
+
+.progressM {
+  font-size: 14px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressM span strong {
+  color: #FEEA4F;
+}
+
+.cardImgTextCtnrM {
+  display: flex;
+  gap: 10px
+}
+
+.cardImgTextCtnrM h5 {
+  font-size: 16px;
+}
+
+.cardMob {
+  display: none;
+}
+
+.organizationNameM {
+  max-width: 200px;
+  margin-top: 10px;
+}
+
+.bookingIdFirstM h6 {
+  font-size: 11px;
+}
+
+
+@media (max-width:991px) {
+  .cardWeb {
+    display: none;
+
+  }
+
+  .cardMob {
+    display: block;
+  }
+
+}
+
+@media (max-width:767px) {
+  .qrOverlaytwo {
+    bottom: -18%;
+  }
+
+
+}
+
+@media (max-width:600px) {
+  .bookingId h6 {
+    font-size: 11px;
+  }
+
+  .bookingId span {
+    font-size: 9px;
+  }
+
+  .cardWrapperBtmFlex {
+    gap: 72px
+  }
+
+  .cardImgTextCtnrM,
+  .cardFlexx {
+    gap: 10px;
+  }
+
+
+
+
+}

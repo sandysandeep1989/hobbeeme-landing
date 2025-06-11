@@ -1,0 +1,4 @@
+.page{
+    background: var(--dark, #0E0F11);
+    min-height: 100vh;
+}

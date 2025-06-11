@@ -1,0 +1,79 @@
+.timelineTitle {
+    color: var(--White, #FFF);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    /* .2px */
+    
+    margin-bottom: 20px;
+}
+
+.timeline {
+    position: relative;
+    border-left: 2px solid #7040f2;
+    padding-left: 30px;
+}
+
+.timelineItem {
+    position: relative;
+    /* margin-bottom: 40px; */
+}
+
+.timelineDot {
+    position: absolute;
+    left: -45px;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    border: 4px solid #0E0F11;
+    border-radius: 8px;
+    background: #A259FF;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 19px;
+}
+
+
+.lasttimelineDot{
+     background: var(--Fuschia-100, #EF5DA8);
+     padding: 4px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+
+.timelineContent {
+    padding-left: 10px;
+}
+
+.dayTitle {
+    color: var(--Dark-Mode-Text-text-primary, #EEEFF3);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 16px;
+    padding-top: 4px;
+}
+
+.activityList {
+    padding-left: 20px;
+    list-style: disc;
+    padding-bottom: 20px;
+    margin: unset;
+}
+
+.activityList li {
+    color: var(--White, #FFF);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}

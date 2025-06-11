@@ -1,0 +1,9 @@
+.svg {
+  transform: rotate(-90deg);
+}
+
+.progress {
+  transition: stroke-dashoffset 0.35s;
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+}

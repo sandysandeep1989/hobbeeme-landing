@@ -1,0 +1,83 @@
+.bodyEvent{padding: 40px 15px 0px 15px;}
+
+.headingSection{display: flex; align-items: center; flex-direction: column; gap: 10px; 
+     text-align: center; max-width: 905px; margin: auto;}
+
+.headingSection h1{font-size: 75px; font-family:var(--font-oswald); font-weight: 700; text-transform: uppercase;}
+.headingSection h1 span{color: #636363;}
+
+.planTag { background: var(--purple); color: var(--foreground); border-radius: 20px; padding: 4px 16px; font-size: 14px; font-weight: 700; display: inline-flex; }
+
+.eventSection {  padding: 60px 0 0 0; color: white; }
+.heading { text-align: center; font-size: 38px; font-family: var(--font-oswald); margin-bottom: 40px; text-transform: uppercase; letter-spacing: 1px; }
+.card { background: #1A1D1F; border-radius: 30px; overflow: hidden; transition: transform 0.3s ease; height: 100%; }
+
+.imageCard{ height: 350px; overflow: hidden;}
+.image { width: 100%; height: 350px; object-fit: cover; border-radius: 30px 30px 0px 0px ; transition: 0.5s all; }
+.card:hover .image {transform: scale(1.1);}
+.cardContent { padding: 20px; }
+.cardContent h3 { font-size: 32px; font-family: var(--font-oswald); margin-bottom: 10px; text-transform: uppercase; }
+.cardContent p { font-size: 16px; color: #fff; }
+
+.moreLink { display: flex; gap: 10px; align-items: center;  font-family: var(--font-oswald); margin-top: 10px; color: #fff; text-decoration: none; 
+    transition: 0.5s all; font-weight: 500; }
+  .moreLink svg,  .moreLink svg rect{ transition: 0.5s all; }
+  .moreLink svg{
+    transform: rotate(-135deg);
+  }
+.card:hover  .moreLink svg{ transform: rotate(-90deg);fill: var(--purple); }
+.card:hover  .moreLink svg rect{stroke: var(--purple);}
+
+.cardBottom{
+  margin-bottom: 30px;
+}
+
+
+@media screen and (max-width: 1279px) {
+  .headingSection h1{
+      font-size: 28px;
+    text-align: center;
+    max-width: 260px;
+  
+  
+  }
+  .heading{
+    font-size: 35px;
+  }
+  .cardContent h3{
+   font-size: 28px;
+  }
+
+}
+
+
+@media screen and (max-width: 767px) {
+ .headingText{
+  font-size: 14px;
+  line-height: 160%; /* 22.4px */
+ }
+  .heading{
+  font-size: 28px;
+  font-weight: 500;
+}
+.eventSection{
+  padding: 15px 0;
+}
+.cardContent h3{
+  font-size: 20px;
+ }
+ .cardContent p{
+  font-size: 12px;
+ }
+ .moreLink{
+  font-size: 10px;
+ }
+ .moreLink svg{
+  width: 17px;
+  height: 17px;
+ }
+ .cardBottom{
+  margin-bottom: 20px;
+}
+
+}

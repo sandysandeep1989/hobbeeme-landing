@@ -1,0 +1,82 @@
+
+
+.accountPage{ background: #1a1d1f; border-radius: 12px; padding: 32px; min-height: 767px; max-width: 1000px;margin: 120px auto;}
+
+.heading {
+  font-size: 2rem;
+  font-family: var(--font-oswald);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #FFFFFF;
+}
+
+.subheading {
+  font-size: 0.875rem;
+  color: #A1A1A1;
+  margin-bottom: 1.5rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+}
+
+.section p {
+  font-size: 0.875rem;
+  color: #A1A1A1;
+  line-height: 1.6;
+}
+
+.section ul {
+  padding-left: 1.5rem;
+  color: #A1A1A1;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+.separator {
+  border: none;
+  border-top: 1px solid #2F2F2F;
+  margin: 2rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* .container {
+    padding: 1rem;
+  } */
+    .accountPage{
+        padding: 0px !important;
+    }
+
+  .heading {
+    font-size: 28px;
+  }
+
+  .subheading {
+    font-size: 14px;
+  }
+
+  .section h3 {
+    font-size: 1rem;
+  }
+
+  .section p,
+  .section li {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width:767px) {
+
+
+}

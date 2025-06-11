@@ -1,0 +1,219 @@
+.layoutWrapper{
+  margin-bottom: 60px;
+}
+.vendorList {
+  background: #0E0F11;
+
+}
+
+.classListWrapping {
+  max-width: 1680px;
+  margin: auto;
+  padding-top: 90px;
+}
+
+.categoriesTabWrapping {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.categoriesTabWrapping::-webkit-scrollbar {
+  display: none;
+}
+
+.eventCardHead {
+  display: flex;
+  padding: 16px 24px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #2F2F2F;
+  background: #1A1D1F;
+  margin-bottom: 24px;
+}
+
+.eventCardHead>div {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.filteredData {
+  color: #FEEA4F;
+}
+
+.shortBy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tabWrapping {
+  display: none;
+}
+
+.mobileButtons {
+  display: none;
+}
+
+
+.stickyCalendar {
+  position: sticky;
+  top: 100px; /* Adjust based on your header height */
+  z-index: 1;
+}
+
+.stickySidebarWrapper {
+  position: sticky;
+  top: 100px; /* Adjust based on header height */
+  height: calc(100vh - 100px); /* Viewport height minus offset */
+  z-index: 1;
+  
+}
+
+.scrollableSidebar {
+  height: 100%;
+  overflow-y: auto;
+  /* optional: for scroll comfort */
+}
+
+.scrollableSidebar::-webkit-scrollbar {
+  display: none;
+}
+
+
+@media(max-width:767px) {
+
+  .classListWrapping {
+    padding-top: 125px;
+  }
+
+  .categoriesTabWrapping {
+    gap: 25px;
+  }
+
+  .eventCardHead {
+    margin-bottom: 24px;
+    padding: 10px 16px;
+  }
+
+  .tabWrapping {
+    display: block;
+    padding: 20px 12px 8px 12px;
+    margin-bottom: 24px;
+  }
+
+  .tabs {
+    border-radius: 999px;
+    border: 1px solid #2F2F2F;
+    background: #0E0F11;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+  }
+
+  .tabs .link {
+    width: 100%;
+  }
+
+  .tab {
+    border-radius: 999px;
+    border: none;
+    background-color: inherit;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 24px;
+    /* 200% */
+    text-transform: capitalize;
+    padding: 4px 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .activeTabs {
+
+    border: 1px solid #2F2F2F;
+    background: #FEEA4F;
+    box-shadow: 1px 0px 13.8px 0px rgba(0, 0, 0, 0.50);
+    color: #000;
+  }
+
+  .mobileButtons {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-around;
+    padding: 12px 0;
+    background-color: #0E0F11;
+    z-index: 1000;
+    border-top: 1px solid #2F2F2F;
+  }
+
+  .mobileButtons button {
+    flex: 1;
+    margin: 0 8px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #2F2F2F;
+    background-color: #1A1D1F;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Hide regular filter and calendar on mobile */
+  .mob-size {
+    display: none !important;
+  }
+
+  .mobileCalendarContainer,
+  .mobileFilterContainer {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0E0F11;
+    /* Or your desired background color */
+    z-index: 1000;
+    /* Above other content and mobile buttons */
+    transform: translateX(-100%);
+    /* Start off-screen to the left */
+    transition: transform 0.3s ease-in-out;
+    /* Smooth transition */
+    overflow-y: auto;
+    /* Allow scrolling if content overflows */
+    /* Add padding or margin as needed for content */
+  }
+
+  .mobileCalendarContainer.open,
+  .mobileFilterContainer.open {
+    transform: translateX(0);
+
+  }
+
+  .tabWrapping {
+    padding: 13px 12px 8px;
+  }
+
+
+}

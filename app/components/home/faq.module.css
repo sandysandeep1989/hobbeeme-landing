@@ -1,0 +1,67 @@
+.Faq {
+    padding: 40px 0;
+}
+
+.Faq h4 {
+    font-family: var(--font-oswald);
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Remove the global selector block */
+/* :global(.accordion-button) {
+    margin: 0 !important;
+} */
+
+.Faq {  padding:50px 30px 80px 30px ;
+  }
+
+  .Faq  h4{font-family: var(--font-oswald); text-align: center; font-size: 64px; font-weight: 700; padding: 40px 0;} 
+  .Faq{ max-width: 960px; margin: auto;}
+
+.accodionHeader button{
+  color: #FFF;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 28px */
+text-transform: capitalize;
+padding: 14px 0;
+}
+
+
+  
+  @media (max-width: 1279px) {
+    .faq h4 {
+ font-size: 35px !important;
+    }
+   
+
+
+  }
+
+
+  @media(max-width:767px){
+    .Faq h4{font-size: 28px !important;}
+    .Faq {
+      padding: 48px 16px;
+    }
+  }
+
+
+  @media (max-width:600px){
+    .Faq h4{
+      padding: 10px 0;
+    }
+    .Faq h4{
+      font-size: 27px !important;
+    }
+
+    .accodionHeader button{
+      font-size: 16px;
+      padding-right: 40px;
+    }
+  }

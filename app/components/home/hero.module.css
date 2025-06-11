@@ -1,0 +1,214 @@
+.heroSection{ max-width: 1680px; width: 100%;  margin: auto; text-align: center; position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);} 
+.heroSection h1{font-size: 48px; font-weight: 700; font-family: var(--font-oswald); text-transform: uppercase; max-width: 880px; margin: auto; padding: 40px 0;} 
+.text{font-size: 16px; font-weight: 500;  max-width: 690px; margin: auto; text-transform: capitalize;} 
+
+
+.formSection{display: flex; align-items: center; gap: 20px; width: 100%; font-family: var(--font-oswald);
+      font-size: 20px; text-transform: uppercase; font-weight: 700;
+     max-width: 900px; margin:30px auto;}  
+
+.searchForm{display: flex; border-radius: 48px; border: 1px solid var(--foreground); width:calc(100% - 220px); width: 100%; overflow: hidden;
+      align-items: center; font-family: var(--font-oswald);}
+.searchForm input{ border: none; width: calc(100% - 56px); height: 58px; outline: none; box-shadow: none; background: none;
+     text-transform: uppercase;  padding-left: 20px; font-family: var(--font-oswald); font-size: 20px; font-weight: 700;}
+
+     .searchForm:hover{
+     
+      background: white;
+      transition: 0.5s all;
+      
+     }
+     .searchForm:hover input::placeholder{
+      color: #000;
+     }
+     .searchForm:hover button{
+      background: var(--yellow); transform: rotate(-90deg); border-color: var(--background)
+     }
+     .searchForm button {
+      transition: transform 0.3s, background 0.3s, border-color 0.3s;
+    }
+    
+    .searchForm:hover button {
+      background: var(--yellow) !important;
+      border-color: var(--background);
+    }
+    
+    .searchForm:hover button svg {
+      transform: rotate(45deg);
+      transition: transform 0.3s;
+    }
+
+    .unique:hover svg path{
+      stroke: var(--background) !important;
+   
+      transition: transform 0.3s;
+      background: transparent !important;
+      border-color: transparent;
+    }
+
+.unique:hover .arrow2{
+      transform: rotate(45deg);
+}
+
+     .searchForm:hover button svg path{ stroke: var(--background);}
+
+
+     .searchForm:hover input{
+      color: #000;
+     }
+     
+
+
+.searchForm button[type='submit']{border-radius: 50%; display: flex; align-items: center; border: var(--purple) 1px solid;
+      justify-content: center; transition: 0.5s all; transform: rotate(-135deg);;
+      background: var(--purple); width: 52px; height: 52px; outline: none; border: none;}
+.searchForm button svg path{transition: 0.5s all;  }
+
+
+
+.searchForm button[type='submit']:hover{background: var(--yellow); transform: rotate(-135deg); border-color: var(--background) ; }
+
+.searchForm button:hover svg path{ stroke: var(--background);}
+
+.searchForm ::placeholder{opacity: 1; color: var(--foreground);}
+
+.unique{ background: var(--foreground); color:var(--background); display: flex; border-radius: 50px; justify-content: center;
+      height: 58px; align-items: center; gap: 15px; text-decoration: none; width: calc(100% - 589px); } 
+.unique svg path{ stroke: black;}
+
+.unique:hover svg path{ 
+      stroke: white!important;
+      transition: 0.3s all;
+     
+}
+.arrow2{
+      width: 20px;
+      height: 20px;     
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s all;
+}
+
+
+
+
+
+.unique svg{
+      rotate: -45deg;
+     
+}
+.unique:hover{
+      background: transparent !important;
+      color: var(--foreground) !important;
+      border: 1px solid var(--foreground) !important;
+      transition: 0.3s all;
+}
+
+    .mobileShow{
+      display: none;
+    }
+
+
+.hero {
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     min-width: 100%;
+     min-height: 110%;
+     z-index: -1;
+     pointer-events: none;
+     overflow: hidden;
+   }
+
+.hero video {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     min-width: 100%;
+     min-height: 110%;
+     width: auto;
+     height: auto;
+     z-index: -1;
+     transform: translate(-50%, -50%);
+     object-fit: cover;
+     opacity: .5;
+   }
+
+    .hero::before{content: ''; position: absolute; left: 0; right: 0; top: 0; height: 300px;
+            background: linear-gradient(180deg, #18191B  0%,  rgba(0, 0, 0, 0.00) 100%);}
+     .hero::after{content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 300px;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #18191B 100%);}
+
+
+
+   @media(max-width:1420px){
+            .heroSection h1{font-size: 42px; max-width: 780px; }
+            .formSection{max-width: 830px;}
+            .unique{font-size: 18px;      width: calc(100% - 400px);}
+            .searchForm input{font-size: 18px;}
+    }
+
+
+  
+
+
+    @media(max-width:1024px){
+  
+
+      .formSection{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          
+            max-width: 500px;
+      }
+      .unique{
+            width: 100%;
+      }
+      .heroSection h1{
+            font-size: 38px;
+            max-width: 594px;
+      }
+      .text {
+            max-width: 544px;
+      }
+     
+
+
+
+
+
+
+
+    }
+
+    @media(max-width:767px){
+      .heroSection{ padding: 40px; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+      .heroSection h1{font-size: 28px; max-width: 317px;
+      padding: 27px 0;}
+      .formSection{display: block;}
+      .unique{font-size: 18px; margin-top: 20px;      width:100%;}
+      .searchForm input{
+            font-size: 16px;
+      }
+      .searchForm button[type='submit']{
+            width: 42px;
+            height: 42px;
+      }
+      .unique{
+            font-size: 16px;
+      }
+      .mobileShow{
+            display: block;
+      }
+      .mobileHide{
+            display: none;
+      }
+
+
+
+
+    }

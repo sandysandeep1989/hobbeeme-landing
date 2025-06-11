@@ -1,0 +1,123 @@
+.carouselWrapper {
+  display: flex;
+  flex-direction: column;
+}
+.crouselheading {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #000000;
+}
+.crouselpara {
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: center;
+  color: #64748b;
+}
+.carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  width: 16.625rem;
+  padding: 1.25rem;
+  gap: 1.25rem;
+  text-align: left;
+  box-shadow: 0px 1px 2px -1px #0000001a;
+  box-shadow: 0px 1px 3px 0px #0000001a;
+  cursor: pointer;
+}
+@media screen and (max-width: 1800px) {
+  .card {
+    width: auto;
+  }
+}
+.title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #64748b;
+}
+.tit {
+  font-weight: 500;
+  font-size: 18px;
+  color: #1e293b;
+}
+.subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin-bottom: 10px;
+  color: #64748b;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.controls button {
+  width: 28px;
+  height: 28px;
+  background: #6a5acd;
+  color: white;
+  border: none;
+  padding: 4px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  display: none;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #6a5acd;
+  display: none;
+}
+.crouselspan {
+  font-weight: 400;
+  font-size: 1rem;
+  color: #64748b;
+}
+.crouselspan1 {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1e293b;
+}
+.card:hover {
+  box-shadow: 0px 4px 6px -4px #644ee51a;
+  border: 1.5px solid #644EE5;
+  transition:0.7s ease;
+  background-color: #F5F3FF;
+}

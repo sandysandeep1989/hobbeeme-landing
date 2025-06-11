@@ -1,0 +1,50 @@
+.modalSize {
+    max-width: 1000px;
+    border-radius: 20px;
+
+}
+
+.modalSize :global(.modal-content) {
+    background-color: transparent;
+    border: none;
+}
+
+.modalBody {
+    border-radius: 24px;
+    background: var(--Card-Color, #1A1D1F);
+    padding: 20px;
+    color: #fff;
+    border: none !important;
+}
+  
+  .title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .slotGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+  
+  .slotItem {
+    background-color: #2a2a2a;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    color: #fff;
+  }
+  
+  .slotItem:hover {
+    background-color: #444;
+  }
+  
+  .active {
+    background-color: #6c5ce7;
+  }
+  

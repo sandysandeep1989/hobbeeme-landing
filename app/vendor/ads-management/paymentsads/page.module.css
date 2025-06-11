@@ -1,0 +1,243 @@
+.paymentadscon {
+  height: 100vh;
+  background-color: white;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  color: black;
+}
+.paymentadsconinner {
+  display: flex;
+  flex-direction: column;
+  max-width: 55.83%;
+  margin: auto;
+  gap: 1.5rem;
+}
+.paymentsHeading {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  color: #000000;
+}
+.paymentsInfo {
+  display: flex;
+  gap: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.leftpaymentsInfo {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.leftpaymentsInfohead {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+.leftpaymentsInfopic {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafc;
+  gap: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  border-width: 1px;
+  padding: 12px;
+}
+.festivalrightdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.festivalrightdivspan1 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 155%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #141516;
+}
+.festivalrightdivspan2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #64748b;
+}
+.leftpaymentsInfolastdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.leftinfodivborder {
+  border: 1px solid #e2e8f0;
+}
+.paymentgatewaydetail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.paymentgatewaydetailheader {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #141516;
+}
+.paymentgatewaydetailspan {
+  display: flex;
+  justify-content: space-between;
+}
+.paymentgatewaydetailspan1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -2%;
+  color: #64748b;
+}
+.paymentgatewaydetailspan2 {
+  display: flex;
+  justify-content: space-between;
+}
+.debitCardDetaildiv {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.debitCardDetaildivHeader {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 132%;
+  letter-spacing: -2%;
+  vertical-align: middle;
+  color: #141516;
+}
+
+.debitcardentry {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+.debitcardentryDate {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.debitcardentryDateinput input {
+  margin-top: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.debitinputnum {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.rightpaymentsInfo {
+  display: flex;
+  flex-direction: column;
+  border: 1.33px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.5rem;
+  gap: 1.5rem;
+  width: 37%;
+ height: fit-content;
+  background-color: #f8fafc;
+}
+.rightpaymentsInfo1 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rightpaymentsInfo1div {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #141516;
+}
+.rightpaymentsInfo1div1 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #644ee5;
+}
+.rightpaymentsInfo2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.rightinfospan {
+  display: flex;
+  flex-direction: column;
+  gap: 10.67px;
+}
+.rightdividespan {
+  display: flex;
+  justify-content: space-between;
+}
+.midborder {
+  height: 1px;
+  background-color: #e2e8f0;
+}
+.rightdividespan1{
+font-weight: 400;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #64748B;
+}
+.rightdividespan2{
+font-weight: 500;
+font-size: 14px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #141516;
+}
+.rightpricespan{
+  display: flex;
+  justify-content: space-between;
+}
+.pricespan{
+color: #141516;
+font-weight: 500;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+.pricespan1{
+color: #644ee5;
+font-weight: 600;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+.finalbtn{
+  padding: 0.75rem 2rem;
+  border: 0px;
+  border-radius: 48px;
+  background-color: #644ee5;
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0%;
+text-align: center;
+color: white;
+}

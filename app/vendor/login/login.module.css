@@ -1,0 +1,500 @@
+.loginParentContainer{
+    display: flex;
+}
+.videoContainer{
+    overflow: hidden;
+    height: 97vh;
+    position: relative;
+}
+.videoText{
+    position: absolute;
+    bottom: 3%;
+    right: 8%;
+    color: #000;
+font-family: Poppins;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 43.2px */
+letter-spacing: -1.8px;
+text-transform: uppercase;
+z-index: 1;
+    
+}
+.error {
+    color: #d32f2f;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .inputError {
+    border: 1.5px solid #d32f2f !important;
+    outline: none;
+  }
+.videoText span{
+    color: #644EE5;
+}
+.videoContainer video{
+    width: 100%;
+  
+    object-fit: cover;
+}
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.fields label{
+    color: var(--Slate-800, #1E293B);
+font-family: Poppins;
+font-size: text-sm;
+font-style: normal;
+font-weight: var(--font-weight-font-medium, 500);
+line-height: leading-5; /* 142.857% */
+}
+.fields input{
+
+color: var(--Gray-500, #6B7280);
+
+font-family: Poppins;
+padding: 10px 12px;
+line-height: leading-5; /* 142.857% */
+border-radius: 6px;
+border: 1px solid var(--Slate-200, #E2E8F0);
+background: rgba(255, 255, 255, 1);
+}
+.loginForm{
+    width: 100%;
+}
+.heading{
+    color: #000;
+text-align: center;
+font-family: Poppins;
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: 120%; /* 43.2px */
+text-transform: capitalize;
+}
+.subHeading{
+    color: rgba(100, 116, 139, 1);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    margin-bottom: 24px;
+    
+    
+}
+.formContainer{
+ max-width: 620px;
+ padding: 0 24px;
+ margin: auto;
+
+ 
+ 
+}
+.loginFormSection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+ 
+    align-items: center;
+    margin-top: 80px;
+}
+.loginFormGap{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.loginHeader{
+    display: flex;
+    justify-content: end;
+    height: 60px;
+}
+.logo{
+   margin-right: 40px;
+ 
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.loginButton{
+    border-radius: 999px;
+background: var(--Violet, #644EE5);
+width: 100%;
+padding: 8px 16px;
+margin-top: 24px;
+
+font-size: 14px;
+border: none;
+font-weight: 600;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.14px;
+}
+.loginButton:hover{
+    background: #4e36b8;
+    transition: all 0.3s ease;
+}
+.ForgotPasswordFields{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--Violet, #644EE5);
+ font-size: 14px;
+font-family: Poppins;
+line-height: leading-5; /* 142.857% */
+}
+
+.signUpLink{
+    margin: auto;
+   color:rgba(100, 116, 139, 1);
+font-family: Poppins;
+font-size: 14px;
+
+
+line-height: leading-5;
+}
+
+.signUpLink a{
+    color: rgba(2, 6, 23, 1);
+ font-size: 14px;
+
+font-weight: 600;
+line-height: leading-5;
+}
+
+.signUpLink a:hover{
+    color: #644EE5;
+    transition: all 0.3s ease;
+}
+
+.activeProvider{
+    border: 2px solid #644EE5 !important;
+    background: #F8F5FF;
+    color: #644EE5;
+    
+}
+
+
+
+
+
+
+
+
+
+
+.signUpHalfFields{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+.signUpHalfFields .fields{
+    width: 50%;
+}
+
+.Provider{
+    display: flex;
+  
+    gap: 16px;
+    padding: 24px;
+    border-radius: 12px;
+background: #fff;
+
+border: 2px solid var(--Slate-200, #E2E8F0);
+}
+.providerText{
+    width: 100%;
+
+    color: rgba(2, 6, 23, 1);
+margin: auto 0;
+
+    font-family: Poppins;
+    font-size: 20px;
+    line-height: leading-5; /* 100% */
+}
+.providerParent{
+    display: flex;
+flex-direction: column;
+gap: 16px;
+
+}
+
+.ExcitedContainer{
+    max-width: 768px;
+    margin: auto;
+}
+.SkillCard{
+    width: 162px;
+ 
+    padding: 14px 0;
+    border-radius: 12px;
+border: 2px solid rgba(226, 232, 240, 1);
+display: flex;
+flex-direction: column;
+
+align-items: center;
+gap: 16px;
+
+}
+.skillText{
+
+color: rgba(2, 6, 23, 1);
+text-align: center;
+margin: auto ;
+line-height: leading-5; /* 125% */
+}
+
+.SkillCard img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.skillImage{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+.skillParent{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+.hostContainer{
+    max-width: 984px;
+    margin: auto;
+}
+.SkillCard2{
+    width: 216px;
+ 
+    padding: 14px 0;
+    border-radius: 12px;
+border: 2px solid rgba(226, 232, 240, 1);
+display: flex;
+flex-direction: column;
+
+align-items: center;
+gap: 16px;
+
+}
+.skillText{
+
+    color: rgba(2, 6, 23, 1);
+    text-align: center;
+    margin: auto ;
+    line-height: leading-5; /* 125% */
+    }
+    
+    .SkillCard2 img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .subcategoriesContainer{
+        max-width: 642px;
+        margin: auto;
+    }
+.subcategoriesOptions{
+    color: #16151A;
+text-align: center;
+font-family: Poppins;
+padding: 7px 16px;
+line-height: 140%; /* 22.4px */
+letter-spacing: 0.216px;
+border-radius: 40px;
+border: 1px solid var(--Slate-200, #E2E8F0);
+background: #FFF;
+
+}
+.categoriesDiv{
+    max-width: 572px;
+    padding: 0 24px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+.questionCategories{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.questionCategories h5{
+    color: rgba(2, 6, 23, 1);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: leading-5; /* 142.857% */
+}
+.questionCategories input{
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--Slate-200, #E2E8F0);
+    background: rgba(255, 255, 255, 1);
+    color: rgba(2, 6, 23, 1);
+    font-family: Poppins;
+    font-size: 14px;
+
+}
+
+
+
+.verifyFormContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .verifyFormGroup {
+    margin-bottom: 24px;
+  }
+  
+  .verifyLabel {
+    color: rgba(2, 6, 23, 1);
+    font-family: Poppins;
+    font-size: 14px;
+  margin-bottom: 7px;
+    line-height: leading-5; /* 142.857% */
+  }
+  
+  .verifyOptional {
+    font-weight: normal;
+    color: #888;
+    font-size: 0.9em;
+  }
+  
+  .verifyInput {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(226, 232, 240, 1);
+    padding: 8px 16px;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(2, 6, 23, 1);   
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: leading-5; /* 142.857% */
+  }
+
+  .verifyFormLabel{
+    width: 100%;
+  }
+
+.verifyInput::file-selector-button{
+    display: none;
+}
+
+.uploadBox {
+    border: 3px dashed #6C4EE5;
+    border-radius: 12px;
+
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+
+    transition: border-color 0.2s;
+  }
+  
+  .uploadBox:hover {
+    border-color: #4e36b8;
+  }
+  
+  .uploadLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    padding: 16px 0;
+  }
+  
+
+  
+  .uploadText {
+    color: #000;
+    font-family: Poppins;
+    font-size: var(--fontSize-sm, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--lineHeights-md, 20px); /* 142.857% */
+    letter-spacing: var(--letterSpacing-md, 0px);
+  }
+  
+  .browse {
+    color: #644EE5;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .backToHome{
+    border-radius: 999px;
+    background: var(--Violet, #644EE5);
+    max-width: 220px;
+    width: 100%;
+    padding: 8px 43px;
+
+    color: var(--Neutral-01, #FCFCFC);
+font-family: Poppins;
+font-size: 14px;
+font-weight: 600;
+line-height: 24px; /* 171.429% */
+letter-spacing: -0.14px;
+border: none;
+
+
+  }
+  .readyPara{
+    color: rgba(2, 6, 23, 1);
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+margin: 0;
+font-weight: var(--font-weight-font-normal, 400);
+line-height: 161%; /* 25.76px */
+  }
+
+  .readyContainer{
+    text-align: center;
+  }
+
+  .readyContainer h5{
+    color: rgba(2, 6, 23, 1);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+  }
+
+  .readyContainerParent{
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+    max-width: 680px;
+    width: 100%;
+  
+  }
+  .subReadyContainer{
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+  }

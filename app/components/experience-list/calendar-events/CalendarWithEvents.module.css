@@ -1,0 +1,239 @@
+/* CalendarComponent.module.css */
+
+.calendarContainer {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    border: 1px solid #242528;
+    background: #1A1D1F;
+    padding: 16px;
+    color: #ffffff;
+    max-width: 400px;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-radius: 8px;
+    border: 1px solid #2F2F2F;
+    background: #1A1D1F;
+    padding: 9px;
+    margin-bottom: 12px;
+}
+
+.header button {
+    position: absolute;
+    top: 5px;
+}
+
+.header button:first-child {
+    left: 6px;
+}
+
+.header button:last-child {
+    right: 6px;
+}
+
+.nextPrevious {
+    border-radius: 6px;
+    background: #0E0F11;
+    box-shadow: 0px 2px 4px 0px rgba(27, 28, 29, 0.04);
+    border: none;
+    padding: 4px 10px;
+}
+
+
+
+
+.daysHeader {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 12px;
+    color: #FEEA4F;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+
+
+.daysGrid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px 4px;
+
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 6px 10px;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #333333;
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+
+.past {
+    opacity: 0.5;
+}
+
+
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: #E760CC;
+    border-radius: 50%;
+
+}
+
+.eventsList {
+    margin-top: 18px;
+}
+
+.eventsList h3 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    /*  */
+    letter-spacing: 0.3px;
+    margin-bottom: 6px;
+}
+
+.timedots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    margin-bottom: 6px;
+    /* 133.333% */
+
+}
+
+.timedots span {
+    flex: 1;
+    border-top: 1px dashed #E0E4EE;
+    height: 0;
+}
+
+.eventCard {
+    display: flex;
+    padding: 6px 8px 6px 0;
+    margin-bottom: 20px;
+}
+
+.eventActivities img {
+    width: 102px;
+    height: 76px;
+    border-radius: 16px;
+    object-fit: scale-down;
+}
+.activeDay{
+    background:  #644EE5;
+}
+
+.title{
+    color: #FFF;
+font-family: Oswald;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+}
+
+
+.eventDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 12px;
+}
+
+.eventDetails h4 {
+    color: #FFF;
+font-family: Oswald;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+margin-bottom: 5px;
+}
+
+.eventDetails p {
+    color: #FFF;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+text-transform: capitalize;
+margin: unset;
+}
+
+.eventDetails p svg {
+    margin-right: 4px;
+    color: #E760CC;
+}
+
+button.btn-outline-light {
+    border-color: #E760CC;
+    color: #E760CC;
+}
+
+button.btn-outline-light:hover {
+    background-color: #E760CC;
+    color: #ffffff;
+}
+
+
+@media(max-width:1400px) {
+    .day{
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+}
+
+@media(max-width:992px) {
+    .calendarContainer{
+        padding: 10px;
+    }
+}

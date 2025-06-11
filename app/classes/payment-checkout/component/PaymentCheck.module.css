@@ -1,0 +1,981 @@
+.tourInfo {
+    display: flex;
+    gap: 16px;
+    background: #1a1a1c;
+    padding: 12px;
+    border-radius: 12px;
+    background: #1A1D1F;
+    margin-bottom: 32px;
+  }
+
+  .orderInfo{
+    color: #FFF;
+font-family: Poppins;
+font-size: 28px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 39.2px */
+margin-bottom: 32px;
+  }
+
+  .tourInfo h3 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  .tourInfo p {
+    color: #D9D9D9;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: unset;
+  }
+
+  .tourImage {
+  
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+
+
+  .mainSection {
+    padding-top: 32px;
+  }
+
+
+
+
+  /* .mainSection > :nth-child(2) {
+    width: 20%;
+  } */
+
+  .choosepackageHead {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 39.2px;
+    letter-spacing: 0.56px;
+    margin-bottom: 32px;
+  }
+
+  .packageCard {
+    background: #1A1D1F;
+    border-radius: 10px;
+    padding: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    border: 1px solid transparent;
+  }
+
+  .packageCard> :nth-child(1) {
+    width: 60%;
+  }
+
+  .packageCard> :nth-child(2) {
+    width: 40%;
+  }
+
+  .packageCard h3 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+
+
+
+  .leftCard ul li {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 16px;
+  }
+
+  .leftCard ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 0;
+  }
+
+  .rightCard {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .price {
+    color: #E0CD47;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .selectedPrice {
+    color: var(--Yellow, #FEEA4F);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .selectBtn {
+    color: #383838;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 16px;
+    border-radius: var(--Spacing-6xl, 32px);
+    background-color: transparent;
+    max-width: 325px;
+    width: 100%;
+    border: 1px solid #383838;
+    cursor: pointer;
+  }
+
+  .selectedBtn {
+    background: var(--Yellow, #FEEA4F);
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 12px 16px;
+    border-radius: var(--Spacing-6xl, 32px);
+    border: 1px solid transparent;
+    cursor: pointer;
+    max-width: 325px;
+    width: 100%;
+
+  }
+
+  .selected {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .bookingSummary {
+    padding: 32px;
+    border-radius: 32px;
+    border: 1.333px solid var(--Color-Light-950, #242528);
+    background: var(--dark, #0E0F11);
+  }
+
+  .detailRow {
+    display: flex;
+    justify-content: space-between;
+    color: #b0b0b0;
+    padding: 16px;
+    border-radius: 16px;
+    border: 1.333px solid var(--Color-Light-950, #242528);
+    margin-bottom: 10px;
+  }
+
+  .totalRow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+  }
+
+  .totalRow span {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.667px;
+    /* 173.333% */
+  }
+
+  .totalPrice {
+    color: var(--Yellow, #FEEA4F) !important;
+    font-family: Poppins;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .bookNowBtn {
+    border-radius: 48px;
+    background: var(--Violet, #644EE5);
+    color: var(--White, #FFF);
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 12px 32px;
+    width: 100%;
+    margin-top: 21px;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .disabledBtn {
+      
+
+    background: var(--Lines, #2F2F2F) !important;
+          cursor: not-allowed;
+          pointer-events: none;
+          color: #7D7D7D;
+         
+      }
+
+
+  .memberGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Similar to g-3 */
+    justify-content: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .memberItem {
+    flex: 0 1 calc(33.333% - 1rem);
+    /* 3 per row (md: 4) with gap */
+    box-sizing: border-box;
+  }
+
+  .memberItem {
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .cardsHeading {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 31.68px;
+    margin-bottom: 24px;
+  }
+
+  .card {
+    position: relative;
+    padding: 12px;
+    border-radius: 20px;
+    border: 1px solid var(--Lines, #2F2F2F);
+    background: #1A1D1F;
+    transition: all 0.3s ease;
+  }
+
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .selectedCard {
+    border: 1px solid var(--Violet, #644EE5);
+  }
+
+  .cardFlex {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .card h5 {
+    color: #FFF;
+    font-family: Oswald;
+    font-size: 19.576px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+  }
+
+  .card p {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: unset;
+  }
+
+  .roleTag {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 6px;
+    background: #9244A6;
+    padding: 4px;
+
+  }
+
+  .addButton {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--Neutral-06, #272B30);
+    background: var(--Neutral-07, #1A1D1F);
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    outline: none; /* remove browser default outline */
+  }
+  
+  .addButton:hover {
+    background-color: #1A1D1F;
+    border-color: var(--Neutral-06, #272B30);
+  }
+  
+  .addButton:focus,
+  .addButton:active {
+    border: 2px solid var(--Neutral-06, #272B30);
+    outline: none;
+    box-shadow: none; /* remove default focus glow */
+  }
+
+ 
+
+  .consentWrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .offerText {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+
+  .termsText {
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .link {
+    color: var(--Yellow, #FEEA4F);
+
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: auto;
+    text-underline-offset: auto;
+    text-underline-position: from-font;
+    text-transform: capitalize;
+  }
+
+  .detailRowPaid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .bookingSummaryHead h3 {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4px;
+  }
+
+  .freeCancel {
+    color: var(--Yellow, #FEEA4F);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 21px;
+  }
+
+  .bookingSummaryHead {
+    border-bottom: 1px solid #2F2F2F;
+    margin-bottom: 21px;
+  }
+
+  .separator {
+    width: 100%;
+    height: 1px;
+    background: #2F2F2F;
+    margin: 16px 0;
+  }
+
+  .divider{
+    width: 100%;
+    height: 1px;
+    background: #2F2F2F;
+    margin: 32px 0;
+  }
+
+  .bookingLabel {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .bookingText {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .discount {
+    color: #FF2B2B;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .discountBox {
+    padding: 32px;
+    border-radius: 32px;
+    border: 1px solid var(--Color-Light-950, #242528);
+    background: var(--dark, #0E0F11);
+    margin-top: 24px;
+  }
+
+  .discountHead {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 4px;
+  }
+
+  .discountText {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 24px;
+  }
+
+  .promoWrapper {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--Card-Color, #1A1D1F);
+  }
+
+  .promoInput {
+    flex: 1;
+    padding: 15px 16px;
+    border: none;
+    outline: none;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-right: 8px;
+
+  }
+
+  .promoInput::placeholder {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .redeemBtn {
+    background-color: #7d5fff;
+    color: var(--White, #FFF);
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+
+  .customModal {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .customModal :global(.modal-content) {
+    background-color: transparent;
+    border: none;
+    /* Darker backdrop */
+
+  }
+
+  .customModal:global(.modal-backdrop.show) {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    /* Darker backdrop */
+    backdrop-filter: blur(6px);
+    /* Optional blur for modern look */
+
+  }
+
+  .modalContent {
+    background-color: #0f0f0f;
+    color: white;
+    border-radius: 20px;
+    padding: 30px 24px;
+  }
+
+  .modalHeader {
+    border-bottom: none;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .modalTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .modalHeader .btn-close {
+    filter: invert(1);
+    /* makes the close icon white */
+    opacity: 0.8;
+    padding: 0;
+    margin: 0;
+  }
+
+ 
+
+  .modalFooter {
+    border-top: none;
+    padding-top: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .formGroup {
+    margin-bottom: 16px;
+  }
+
+  .formLabel {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .formControl {
+    border-radius: var(--Other-Radius-xl, 16px);
+    background: #272B30;
+    border: none;
+    color: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+  }
+
+  .formControl::placeholder {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .formControl:focus {
+    box-shadow: none;
+    background: #272B30;
+    outline: none;
+    border: 1px solid #7d5fff;
+  }
+
+  .cancelBtn {
+    background-color: transparent;
+    border: none;
+  }
+
+  .cancelBtn:hover {
+    background-color: transparent;
+  }
+
+  .saveBtn {
+    border-radius: 8px;
+    background: var(--Violet, #644EE5);
+    width: 100%;
+
+    font-weight: bold;
+    padding: 14px 32px;
+    border: none;
+    color: #FFF;
+    text-align: center;
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /*  */
+  }
+
+  .saveBtn {
+    background: var(--Violet, #644EE5);
+  }
+
+  .paymentHeadWrapper {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  .title {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 132%;
+    /* 31.68px */
+    letter-spacing: -0.48px;
+    margin-bottom: 4px;
+  }
+
+  .subtitle {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: -0.28px;
+    margin-bottom: unset;
+  }
+
+  .cardIcons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .walletContainer {
+    border-radius: 16px;
+    background: var(--Card-Color, #1A1D1F);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+  }
+
+  .walletHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+  }
+
+  .addFundsBtn {
+    border-radius: 12px;
+    border: 2px solid var(--Neutral-06, #272B30);
+    background: var(--Neutral-07, #1A1D1F);
+    padding: 12px 20px;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    /* 150% */
+  }
+
+  .walletBalanceDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .walletBalanceDiv span {
+    color: #FFF;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .sufficientBalance {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--Yellow, #FEEA4F);
+    font-family: Oswald;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+  }
+
+  .insufficientBalance {
+    color: var(--Red, #EF4444);
+    font-family: Oswald;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .insufficientFund {
+    color: var(--Red, #EF4444);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: end;
+
+  }
+
+  .cardLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    /*  */
+    letter-spacing: -0.32px;
+    margin-bottom: 12px;
+  }
+  .inputGroup{
+    width: 100%;
+  }
+
+  .inputGroup label {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    /* 19.6px */
+    letter-spacing: -0.28px;
+    margin-bottom: 8px;
+  }
+
+  .inputGroup input {
+    border-radius: var(--Other-Radius-xl, 16px);
+    border: 1px solid var(--Color-Light-950, #242528);
+    padding: 12px 16px;
+    width: 100%;
+    outline: none;
+    background: transparent;
+  }
+
+  .formrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: 32px;
+  }
+
+  .addFund {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .addFund :global(.modal-content) {
+    background-color: transparent;
+    border: none;
+  }
+
+  .modalContainer {
+    background-color: #0f0f0f;
+    color: white;
+    border-radius: 20px;
+    padding: 48px;
+    overflow: hidden;
+  }
+
+  .cardBalance {
+    margin: 24px 0;
+  }
+
+  .modalBalanceLabel {
+    color: #FFF;
+    text-align: center;
+    font-family: Oswald;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 21px;
+    /*  */
+  }
+
+  .modalBalance {
+    color: var(--Yellow, #FEEA4F);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+  }
+
+  .inputLabel {
+    color: #A1A1A1;
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 4px;
+  }
+
+  .inputField {
+    border-radius: var(--Other-Radius-xl, 16px);
+    background: #272B30;
+    padding: 12px 16px;
+    width: 100%;
+    outline: none;
+    border: none;
+  }
+
+  .modalNote {
+    color: #FFF;
+    text-align: right;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 8px;
+  }
+
+  .quickButtons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 150px;
+    margin-top: 20px;
+  }
+
+  .amountButton {
+    padding: 14px 20px;
+    border-radius: 100px;
+    background: #34A853;
+    border: none;
+    width: 100%;
+  }
+
+
+
+  .keyClassDetails h3{
+    color: var(--Color-Netural-White, #FFF);
+font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: 132%; /* 31.68px */
+letter-spacing: -0.48px;
+margin-bottom: 16px;
+  }
+
+  .keyClassDetails ul{
+    padding-left: 20px;
+    list-style-type: disc;
+    margin: unset;
+  }
+  .keyClassDetails ul li{
+    color: #FFF;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+opacity: 0.6;
+margin-bottom: 12px;
+  }
+
+  .keyClassDetails ul li:last-child{
+    margin-bottom: 0;
+  }
+

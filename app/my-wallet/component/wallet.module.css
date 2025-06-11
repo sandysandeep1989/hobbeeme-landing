@@ -1,0 +1,378 @@
+.accountPage{ background: #1a1d1f; border-radius: 12px; padding: 32px; min-height: 767px;}
+
+.accountPage h1{font-family:var(--font-oswald); font-weight: 500; font-size: 32px; }
+
+.walletWrapper {
+ color: #fff;
+
+}
+
+.sizeTfour {
+  font-family: var(--font-oswald);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.walletHeader p {
+  color: #A1A1A1;
+    font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.walletBalanceBox {
+  background-color: #1A1D1F;
+  min-height: 110px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  margin-top: 1.5rem;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border: 1px solid #2F2F2F;
+  flex-wrap: wrap;
+}
+
+.walletBalanceBox p {
+  font-family: var(--font-oswald);
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.walletBalanceBox h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #FEEA4F;
+  margin-top: 8px;
+   margin-bottom: 0px;
+}
+
+.walletActions{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.walletActions button {
+  background: #644EE5;
+  color: white;
+  font-weight: 500;
+  border: none;
+  padding: 12px 20px;
+ font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.walletActions .redeemBtn {
+  background: #1A1D1F;
+  border: 1px solid #272B30;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.transactionSection h3 {
+  font-size: 1.5rem;
+  font-family: var(--font-oswald);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+
+.transactionSection p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #A1A1A1;
+  margin-bottom: 20px;
+}
+.walletBalanceWithEye{display: flex; align-items: center; gap: 8px;}
+.walletBalanceWithEye p{
+  margin-bottom: 0px;
+}
+
+
+.transactionTable thead {
+  background-color: #1c1c1c;
+}
+
+.status {
+  padding: 4px 11px;
+  border-radius: 9999px;
+  font-size: 12px;
+ text-transform: capitalize;
+  display: inline-block;
+}
+
+.paid {
+  background-color: #34A853;
+  color: #FFFFFF;
+}
+
+.failed {
+  background-color: #EF4444;
+  color: #FFFFFF;
+}
+
+.refunded {
+  background-color: #2F2F2F;
+  color: #FFFFFF;
+}
+
+
+/* ----------Table CSS----------------------------- */
+
+
+/* -----table csss */
+
+
+.tableWrapper {
+
+
+  color: #FFFFFF;
+  font-size: 14px;
+  overflow-x: auto;
+  margin-bottom: 88px;
+
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.headerRow {
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px !important;
+ background-color: #18191B;
+  
+
+
+}
+
+.theadWrapper {
+
+  background-color: #18191B;
+  border-radius: 12px;
+  overflow: hidden;
+border-radius: 12px !important; 
+}
+
+.row {
+  font-size: 15px;
+}
+.row .td:last-child{
+  text-align: center;
+
+}
+
+.th {
+  text-align: left;
+  padding: 11px 16px;
+  border-top: 1px solid #2F2F2F;
+   border-bottom: 1px solid #2F2F2F;
+   padding-right: 32.5px;
+   font-size: 14px;
+   font-weight: 500;
+
+  
+ 
+
+}
+
+.td {
+  font-size: 14px;
+  padding: 18px 0;
+  padding-left: 16px;
+  padding-right: 32.5px;
+  
+}
+
+.headerRow th:first-child {
+    border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-left: 1px solid #2F2F2F;
+}
+.headerRow th:last-child {
+  text-align: center;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-right: 1px solid #2F2F2F;
+}
+
+
+/* ================================================================Modal css =========================================================================== */
+
+.modalBody {
+  background-color: #1c1c1e;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.headerSection {
+  background-color: #fcdc58;
+  padding: 20px;
+  text-align: center;
+}
+
+.bannerImage {
+  max-width: 100%;
+  height: auto;
+}
+
+.redeemSection {
+  padding: 24px;
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.label {
+  color: white;
+  font-weight: 500;
+}
+
+.input {
+  background-color: #2c2c2e;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.subtext {
+  color: gray;
+  font-size: 12px;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.cancelBtn {
+  background: transparent;
+  color: white;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 45%;
+}
+
+.successSection {
+  text-align: center;
+  color: white;
+  padding: 32px 24px;
+}
+
+.successTitle {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.balanceRow {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.balanceAmount {
+  color: #fcdc58;
+  font-weight: bold;
+}
+
+.viewWalletBtn {
+  margin-top: 24px;
+  background-color: #7a5ef8;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------Media  Query--------------------------- */
+
+@media (max-width: 768px) {
+
+  .walletHeader h2{
+    font-size: 28px;
+  }
+  .walletBalanceBox {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .walletActions button {
+    margin-left: 0;
+  }
+
+  .walletActions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .headerRow th{font-size: 14px;}
+   .accountPageSavedCol{padding: 0px !important;}
+
+   .row .td:nth-child(2),
+    .row .td:nth-child(3),
+     .row .td:nth-child(4),
+      .row .td:nth-child(5){
+    display: none;
+   }
+
+   .headerRow th:nth-child(2),
+    .headerRow th:nth-child(3),
+     .headerRow th:nth-child(4),
+      .headerRow th:nth-child(5){
+    display: none;
+   }
+  .row .td:last-child{width: 77px;}
+  .tableWrapper{background-color: #18191B; border-radius: 16px; border: 1px solid #18191B;
+
+    border-top-left-radius: 12px;
+     border-top-right-radius: 12px;
+        border-bottom-right-radius: 16px;
+         border-bottom-left-radius: 16px;
+
+  }
+
+
+
+
+
+
+}

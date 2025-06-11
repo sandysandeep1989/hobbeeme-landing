@@ -1,0 +1,890 @@
+    
+    .classContainer{
+        /* background-color: #000; */
+        max-width: 1346px;
+        margin: 0 auto;
+    }
+    
+    
+    .loadMoreButton {
+        color: var(--White, #FFF);
+        font-family: Oswald;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 12px 32px;
+        border-radius: 48px;
+        background: var(--Violet, #644EE5);
+        border: none;
+    }
+
+    .loadMoreButtonContainer{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+       
+        cursor: pointer;
+    }
+
+    .loadMoreButton:hover{
+        color: #644EE5;
+        background-color: #FFF; 
+        transition: all 0.3s ease;
+    }
+
+    .title{
+        color: var(--White, #FFF);
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+        margin: 24px 0;
+    }
+
+
+    /* =======rating section======= */
+
+    .ratingContainer{
+        max-width: 1346px;
+        
+    }
+    .ratingCard{
+        display: flex;
+    
+        gap: 16px;
+    }
+
+
+    .ratingCard{
+        display: flex;
+        justify-content: space-between;
+    }
+    .ratingCardHeader{
+        display: flex;
+        gap: 16px;
+    }
+
+    .ratingCardHeaderLeft{
+        display: flex;
+        gap: 16px;
+    }
+
+    .ratingStar{
+        display: flex;
+        color: black;
+        height: 34px;
+        padding: 6px 8px;
+        border-radius: 8px;
+    background: #FEEA4F;
+    gap: 4px;
+margin: auto 0;
+
+
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    }   
+
+    .ratingTitle{
+        color: #FFF;
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-top: 24px;
+    /* margin-bottom: 24px; */
+    }
+
+    .ratingCardText{
+        color: var(--Color-Gray-500, #A1A1A1);
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+
+    .ratingCardDate{
+        color: #A1A1A1;
+        font-family: Poppins;
+        font-size: 14px;
+    }
+    .ratingCardHeaderRight{
+        color: var(--Color-Netural-White, #FFF);
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+    .likeButton{
+        color: var(--Color-Netural-White, #FFF);
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 25.2px */
+        cursor: pointer;
+    }
+  
+
+    .ratingLikeParent{
+        display: flex;
+        gap: 16px;
+    }
+    .ratingContainerHeader{
+        padding-top: 21.33px;
+      padding-bottom: 21.33px;
+      border-bottom: 1.333px solid var(--Color-Light-950, #242528);
+    }
+
+
+    .showMoreButton{
+        color: var(--White, #FFF);
+   
+        font-family: Poppins;
+        font-size: 22px;
+        margin-top: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 35.2px */
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        text-decoration-skip-ink: none;
+        text-decoration-thickness: auto;
+        text-underline-offset: auto;
+        text-underline-position: from-font;
+        cursor: pointer;
+    }
+
+    .showMoreButton:hover{
+        color: #644EE5;
+        transition: all 0.3s ease;
+    }
+
+    
+
+
+    /* ==========================service section======================================== */
+
+
+
+    .serviceContainerHeader{
+
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        border-bottom: 1.333px solid var(--Color-Light-950, #242528);
+
+    }
+
+    .filterButton{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        cursor: pointer;
+        border-radius: 40px;
+border: 1px solid rgba(255, 255, 255, 0.20);
+padding: 10px 12px;
+color: #FFF;
+text-align: center;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+    }
+
+
+    .filterButtonParent{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .serviceContainerHeaderTitle{
+        color: var(--White, #FFF);
+        font-family: Poppins;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: capitalize;
+    }
+
+    .toggleContainer{
+        display: flex;
+      
+    
+        border-radius: 999px;
+border: 1px solid var(--Lines, #2F2F2F);
+background: var(--dark, #0E0F11);
+max-width: 445px;
+margin-top: 24px;
+margin-bottom: 24px;
+padding: 4px;
+position: relative;
+
+
+
+    }
+
+    .toggleButton {
+        position: relative;
+        overflow: hidden;
+        border-radius: 999px;
+        padding: 12px 48px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-family: Poppins;
+        font-weight: 300;
+        transition: color 0.3s;
+       
+    }
+
+    .toggleButton.toggleActive::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        /* background: #FEEA4F; */
+        z-index: 1;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        border-radius: 999px;
+    }
+
+    .toggleButton.toggleActive.animated::before {
+        transform: scaleX(1);
+    }
+
+    .toggleButton,
+    .toggleButton span {
+        position: relative;
+        z-index: 5;
+    }
+
+    .toggleButton.toggleActive,
+    .toggleButton.toggleActive span {
+        color: #222;
+    }
+
+    .toggleActive{
+        border-radius: 999px;
+        
+        font-weight: 600;
+        color: #000;
+    }
+    .toggleIndicator {
+        position: absolute;
+        bottom: 6px;
+        height: 3px;
+        height: 45px;
+        width: 100%;
+        background: #FEEA4F;
+      border-radius: 999px;;
+      border: 1px solid var(--Lines, #2F2F2F);
+      
+        box-shadow: 1px 0px 13.8px 0px rgba(0, 0, 0, 0.50);
+        z-index: 3;
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      }
+
+    .serviceCard{
+        /* background-color: #191A1D; */
+        border-radius: 24px;
+        padding: 8px;
+        display: flex;
+        /* flex-direction: column; */
+        gap: 16px;
+        width: 100%;
+        max-width: 422px;
+        display: flex;
+      
+    }
+
+    .serviceCardImage{
+        position: relative;
+        max-width: 177px;
+        width: 100%;
+   
+        height: auto;
+        border-radius: 24px;
+        object-fit: cover;
+        border-radius: 20px;
+
+    }
+    .serviceCardImage img{
+        width: 100%;
+        height: 100%;
+             border-radius: 20px;
+        object-fit: cover;
+    }
+
+    .serviceCardHeart{
+        cursor: pointer;
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        top: 11px;
+        top:12px;
+        right: 13px;
+        background-color: #00000060;
+        border-radius: 999px;
+        padding: 2px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+.serviceCardBadges{
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.bollywoodBadge{
+    color: #FFF;
+
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 100px;
+
+
+background-color: #5465FF26;
+padding: 5px 10px;
+}
+
+.inStudioBadge{
+    color: #FFF;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+border-radius: 4px;
+background: rgba(255, 255, 255, 0.15);
+max-height: 52px;
+padding: 0px 4px;
+display: flex;
+align-items: center;
+}
+
+
+.bollywoodBadgeParent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 23px;
+}
+
+.bollywoodMagic{
+    color: #FFF;
+font-family: Oswald;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.adeText{
+    color: var(--Yellow, #FEEA4F);
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;         
+}
+
+.offText{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 9999px;
+background: #644EE5;
+padding: 2px 6px;
+}
+.lineThroughText{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: line-through;
+    text-transform: capitalize;
+    opacity: 0.6;
+}
+
+.offLineThroughContainer{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.serviceCardParent{
+    max-width: 432px;
+    background-color: #1A1D1F;
+    border-radius: 8px;
+    padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+.serviceCardParent:hover{
+      transform: scale(1.03);
+}
+.bottomBar{
+    color: #ED99DC;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+background: rgba(231, 96, 204, 0.17);
+margin-top: 2px;
+}
+.serviceCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 24px;
+}
+.filterHover:hover .dropdownMenu{
+    display: block;
+    background-color: #000;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+.ArtHover:hover .dropdownMenu{
+    display: block;
+    background-color: #000;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+.LevelHover:hover .dropdownMenu{
+    display: block;
+    background-color: #000;
+        color: #FFF;
+    transition: all 0.3s ease;
+}
+.IndividualHover:hover .dropdownMenu{
+    display: block;
+    background-color: #000;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+.StudioHover:hover .dropdownMenu{
+    display: block;
+    background-color: #000;
+    color: #FFF;
+    transition: all 0.3s ease;
+}
+
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background: #23243a;
+    color: #fff;
+    border-radius: 8px;
+    min-width: 105px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    z-index: 10;
+    padding: 8px 0;
+  }
+  .dropdownItem {
+    padding: 8px 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s;
+  }
+  .dropdownItem:hover {
+    background: #393A3F;
+  }
+  .imagesCardParent{
+    border-radius: 7px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+.mobileShow{
+    display: none;
+}
+.serviceCardDiscount{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+
+
+  /* ratingsection */
+
+  .reviewContainer{
+  
+    color: #fff;
+    
+   
+    display: flex;
+    justify-content: space-between;
+    font-family: poppins;
+    margin-top: 12px;
+    padding: 12px 0px 30px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  }
+  
+  .reviewHeader{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .ratingScore {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Oswald;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 72px */
+    letter-spacing: -1.2px;
+  }
+  
+  .stars {
+    color: gold;
+    font-size: 20px;
+  }
+  
+  .reviewCount {
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    letter-spacing: -0.32px;
+  }
+  
+  .ratingBars {
+
+    min-width: 840px;
+  }
+  
+  .ratingRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+   
+  }
+  
+  .starLabel {
+    color: var(--Color-Netural-White, #FFF);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 18.2px */
+  }
+  
+  .barBackground {
+    flex: 1;
+    height: 8px;
+    background-color: #333;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+
+/* styles.module.css or your main stylesheet */
+
+.barBackground {
+    width: 100%;
+    height: 8px;
+    background-color: #333;
+    border-radius: 4px;
+    margin-left: 8px;
+    margin-top: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .barFilled {
+    height: 100%;
+    background-color: #644EE5; /* Purple */
+    width: 0%; /* default — will be overridden by inline style */
+    border-radius: 4px 0 0 4px;
+    transition: width 0.3s ease-in-out;
+  }
+    
+
+
+  .videoContainer{
+    position: relative;
+  }
+
+  .videoContainer video{
+    border-radius: 20px;
+  }
+  
+.playButton{
+    position: absolute;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    top: 3%;
+    right: 5%;
+   display: flex;
+
+justify-content: center;
+align-items: center;
+   background-color: #ffffff;
+}
+
+
+
+    /* ==================responsive css================================= */
+    @media (max-width: 1440px) {
+        .serviceContainerHeaderTitle{
+            font-size: 22px;
+        }
+        .serviceCard{
+            max-width: 380px;
+        }
+        .serviceCardParent{
+            max-width: 380px;
+        }
+        .serviceCardImage{
+            max-width: 160px;
+        }
+    }
+    
+    @media (max-width: 1366px) {
+        .serviceContainerHeaderTitle{
+            font-size: 20px;
+        }
+        .serviceCard{
+            max-width: 340px;
+        }
+        .serviceCardParent{
+            max-width: 340px;
+        }
+        .serviceCardImage{
+            max-width: 140px;
+        }
+        .bollywoodMagic{
+            font-size: 18px;
+        }
+    }
+    
+    @media (max-width: 1280px) {
+        .serviceContainerHeaderTitle{
+            font-size: 18px;
+        }
+        .serviceCard{
+            max-width: 320px;
+        }
+        .serviceCardParent{
+            max-width: 320px;
+        }
+        .serviceCardImage{
+            max-width: 130px;
+        }
+        .bollywoodMagic{
+            font-size: 16px;
+        }
+        .adeText{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 1199px) {
+        .reviewContainer{
+            flex-direction: column;
+        }
+
+    }
+    
+    @media (max-width: 1024px) {
+        .serviceContainerHeaderTitle{
+            font-size: 16px;
+        }
+        .serviceCard{
+            max-width: 300px;
+        }
+        .serviceCardParent{
+            max-width: 300px;
+        }
+        .serviceCardImage{
+            max-width: 120px;
+        }
+        .bollywoodMagic{
+            font-size: 15px;
+        }
+        .adeText{
+            font-size: 14px;
+        }
+        .filterButton{
+            padding: 8px 10px;
+            font-size: 11px;
+        }
+        .toggleButton{
+            padding: 10px 35px;
+            font-size: 14px;
+        }
+        .ratingScore{
+            font-size: 35px;
+        }
+    }
+    
+    @media (max-width: 968px) {
+        .serviceContainerHeaderTitle{
+            font-size: 15px;
+        }
+        .serviceCard{
+            max-width: 280px;
+        }
+        .serviceCardParent{
+            max-width: 280px;
+        }
+        .serviceCardImage{
+            max-width: 110px;
+        }
+        .bollywoodMagic{
+            font-size: 14px;
+        }
+        .adeText{
+            font-size: 13px;
+        }
+        .filterButton{
+            padding: 6px 8px;
+            font-size: 10px;
+        }
+        .toggleButton{
+            padding: 8px 30px;
+            font-size: 13px;
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .serviceCardParent{
+            max-width: unset;
+            width: 100% ;
+        }
+        .serviceCard{
+            max-width: unset;
+        }
+        .serviceCardParent{
+            max-width: unset;
+        }
+        .serviceCard{
+            padding: 0;
+        }
+        .ratingContainer{
+            padding: 21.33px 16px;
+        }
+        .mobileHide{
+            display: none;
+        }
+        .mobileShow{
+            display: block;
+        }
+        .loadMoreButtonContainer{
+            display: none;
+        }
+        .serviceCardParent{
+            background: transparent;
+        }
+        .serviceCardImage{
+            max-width: 102px;
+        }
+        .serviceCardDiscount{
+            gap: 10px;
+        }
+        .lineThroughText{
+            margin: 0 5px;
+        }
+        .adeText{
+            display: flex;
+            align-items: center;
+        }
+        .filterButton{
+            padding: 4px 8px;
+        }
+        .toggleButton{
+            padding: 9px 30px;
+        }
+        .loadMoreButton{
+            padding: 7px 16px;
+            font-size: 16px;
+        }
+        .toggleContainer{
+            max-width: 327px;
+        }
+        .reviewContainer{
+            flex-direction: column;
+        }
+        .ratingScore{
+            font-size: 16px;
+        }
+        .reviewCount{
+            font-size: 14px;
+        }
+        .ratingBars{
+            min-width: unset;
+        }
+        .reviewContainerHeader{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .reviewCount{
+            color: #A1A1A1;
+        }
+    }
+    
+    @media (max-width: 419px) {
+        .toggleButton{
+            padding: 9px 25px;
+        }
+        .toggleContainer{
+            max-width: 298px;
+        }
+    }
+
+
+

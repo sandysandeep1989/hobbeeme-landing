@@ -1,0 +1,78 @@
+.things-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    
+  }
+  
+  .things-label {
+    color:rgba(2, 6, 23, 1);
+   
+font-family: Poppins;
+font-size: 14px;
+line-height: leading-5; /* 142.857% */
+    
+  }
+  
+  .things-dropdown {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .things-selected {
+
+    padding: 8px 16px;
+    border-radius: 8px;
+    color:rgba(2, 6, 23, 1);
+   
+    font-family: Poppins;
+    font-size: 14px;
+    line-height: leading-5; /* 142.857% */
+        
+border: 1px solid rgba(226, 232, 240, 1);
+background: #FFF;
+  }
+  
+  .things-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 0 08px 8px;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+  
+  .things-option {
+   
+    color:rgba(2, 6, 23, 1);
+   
+    font-family: Poppins;
+    font-size: 14px;
+padding: 12px;
+    cursor: pointer;
+  }
+  
+  .things-option:hover {
+    background: #f3f3f3;
+  }
+  
+
+  .things-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='17' viewBox='0 0 16 17' fill='none'%3E%3Cpath d='M4 6.31506L8 10.3151L12 6.31506' stroke='%236F767E' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+    padding-right: 2rem; /* give room for the arrow */
+  }
+  

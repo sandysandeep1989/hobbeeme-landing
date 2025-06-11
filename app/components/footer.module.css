@@ -1,0 +1,197 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-size: 14px;
+
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  
+    max-width: 1640px;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .section1{
+    flex: 0 0 27%;
+    min-width: 27%;}
+    .section1 p{max-width: 350px;}
+
+  .section2  {
+    flex:0 0  16%;
+    min-width: 16%;
+    padding-right:15px;
+  }
+
+  .section3  {
+    flex:0 0  25%;
+    min-width: 25%;
+  }
+ 
+
+
+  .section2 h4{font-size: 16px; font-weight: 700; padding-top: 10px;}
+  
+  .logo img {
+    width: 212px; height: auto;margin-bottom: 35px;
+  }
+  
+  .bee {
+    color: yellow;
+  }
+  
+ .footer ul {
+    list-style: none;
+    padding:10px 0 0  0;
+  }
+  
+  .footer ul li {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer  ul li a:hover {
+    color: #f3c623;
+  }
+  
+  .subscribe {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 10px;
+    border-bottom:#2F2F2F 1px solid ;
+  }
+  
+  .subscribe input {
+    flex: 1;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    background: none;
+
+  }
+  
+  .subscribe button {
+    padding: 0.3rem 1.3rem;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: 500;
+    border-radius: 999px;
+    cursor: pointer;
+  }
+  
+  .appLinks {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items:flex-end
+  }
+  
+  .appLinks img{
+    width: 160px;
+    height: auto;
+  }
+  .bottomBar {
+    border-top: 1px solid #333;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1640px;
+    margin:20px auto 0 auto;
+
+  }
+  .mail{
+    display: flex;
+    gap: 10px;
+  }
+  .mail strong{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section h5{padding-top: 10px; font-size: 16px; font-weight: 400;}
+  .social  { display: flex; align-items: center;}
+
+  .social a{display: inline-flex; border:1px solid #E5E5E5; width: 40px; height: 40px;  margin: 0 5px; 
+    border-radius: 50%; align-items: center; justify-content: center; transition: 0.5s all;}
+    .social a svg path{fill:#E5E5E5;}
+
+    .social a:hover{color: #fff;  transition: 0.5s all;}    
+    .social a:hover path{fill: #fff;}
+    .reserved{padding-top: 5px;}
+
+ @media(max-width:1700px){
+    .section3 h5{font-size: 16px;}
+      .appLinks img{ width: 140px;}
+
+
+ }
+
+ @media(max-width:1440px){
+  .section3{
+    flex:0 0  22%;
+    min-width: 22%;
+  }
+ }
+ @media(max-width:1279px){
+  .section2{
+    flex:0 0  25%;
+    min-width: 25%;
+  }
+  .section3{
+    flex:0 0  35%;
+    min-width: 55%;
+    padding-top: 10px;
+  }
+  .appLinks {
+    flex-direction: row;
+  }
+ }
+
+
+  @media(max-width:1200px){
+    .section3 h5{font-size: 13px;}
+     .section2 h4{font-size: 13px;}
+     .section1 p, .section2 p{font-size: 12px;}
+     .footer ul li{margin-bottom: 3px;}
+    .footer ul li a{font-size: 12px;}
+      .footer  .logo img{ max-width: 150px; margin-bottom: 15px;}
+      .appLinks img{ width: 120px;}
+      .subscribe input[type='email']{width: calc(100% - 50px); padding:5px  5px 5px 0; font-size: 12px;}
+      .subscribe button{padding:5px 10px; font-size: 12px;}
+      .mail strong{
+        width: 18px;
+        height: 18px;
+       
+      }
+ }
+
+
+
+
+
+@media(max-width:767px){
+      .section1, .section2, .section3{flex: 0 0 100%; max-width: 100%;}
+      .section3 h5{ font-size: 15px;}
+      .section1 p{font-size: 14px;}
+      .appLinks{flex-direction: row;}
+      .footer ul {padding: 15px 0 0 0;}
+      .footer ul li a{font-size: 14px;}
+      .footer ul li {margin-bottom: 5px;}
+      .appLinks img{ width: 50%;  height: auto; }
+      .subscribe button{padding:5px 15px; font-size: 14px;}
+ }

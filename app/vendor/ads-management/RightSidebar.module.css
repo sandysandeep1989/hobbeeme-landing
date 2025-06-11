@@ -1,0 +1,91 @@
+/* RightSidebar.module.css */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -40vw; /* hidden off screen initially */
+  width: 40vw;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebarOpen {
+  right: 0; /* slide in */
+  box-shadow: 0px 25px 50px -12px #00000040;
+}
+
+.toggleBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.posterAds {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  gap: 8px;
+}
+.dataContent {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  gap: 8px;
+}
+.adssidehead {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  letter-spacing: 0%;
+  color: #0e0f11;
+}
+.sideparentbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.adsSideData {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.sidespan1 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: #2f2f2f;
+}
+.sidespan2 {
+  color: #0e0f11;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+.adssideparenthead {
+  display: flex;
+  justify-content: space-between;
+}
+.sideadsbtn {
+  padding: 8px 16px;
+  background-color: #644ee5;
+  color: white;
+  border: 0px;
+  border-radius: 999px;
+}

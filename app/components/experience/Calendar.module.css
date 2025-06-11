@@ -1,0 +1,262 @@
+.bookingContainer {
+    background-color: #0e0e11;
+    padding: 32px;
+    border-radius: 32px;
+    border: 1.333px solid var(--Color-Light-950, #242528);
+    background: var(--dark, #0E0F11);
+}
+
+.priceText {
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 21px;
+}
+
+.oldPrice {
+    opacity: 0.6;
+    margin: 0 12px;
+}
+
+.selectBox p{
+    margin: unset;
+}
+
+.selectBox {
+    
+    border-radius: 21px;
+    border: 1.333px solid var(--Color-Light-950, #242528);
+    padding: 16px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.selectBox:hover {
+    border-color: #444;
+}
+
+.label {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 22.4px */
+    margin: unset
+}
+
+.dateDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.totalPrice {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 34.667px; /* 173.333% */
+    margin-top: 32px;
+    margin-bottom: 20px;
+}
+
+.highlightedPrice {
+    color: var(--Yellow, #FEEA4F);
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.bookNowBtn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    justify-content: center;
+    border-radius: 48px;
+background: var(--Violet, #644EE5);
+    border: none;
+    padding: 12px 32px;
+    color: var(--White, #FFF);
+    font-family: Oswald;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 100%;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bookNowBtn:hover {
+    background-color: #5a3de0;
+}
+
+
+.modalSize {
+    max-width: 1000px;
+    border-radius: 20px;
+
+}
+
+.modalSize :global(.modal-content) {
+    background-color: transparent;
+    border: none;
+}
+
+.modalBody {
+    border-radius: 24px;
+    background: var(--Card-Color, #1A1D1F);
+    padding: 20px;
+    color: #fff;
+    border: none !important;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.title {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.calendarGrid {
+    display: flex;
+    gap: 32px;
+    justify-content: space-between;
+}
+
+.monthBlock {
+    flex: 1;
+}
+
+.navButtons{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.slideButton{
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+.slideButton:hover{
+    background: none;
+}
+
+.monthTitle {
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    font-size: 13px;
+    color: #bbb;
+    margin-bottom: 55px;
+    /* NEW: spacing */
+    column-gap: auto;
+    /* or a fixed value like 8px */
+    row-gap: 32px;
+}
+
+.weekdays span {
+    text-align: center;
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: auto;
+    /* or a fixed value like 8px */
+    row-gap: 32px;
+}
+
+.dateCell {
+    height: 60px;
+    border-radius: 12px;
+    background-color: transparent;
+    text-align: center;
+    padding: 0px 7px;
+    padding-top: 6px;
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.dateCell:hover {
+    background-color: #2a2a2e;
+}
+
+.disabled {
+    color: #767676;;
+    pointer-events: none;
+}
+
+.price {
+    background-color: #f5dd3b;
+    color: var(--Black, #000);
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+    padding: 2px 4px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.disabledPrice{
+    background-color:  #767676;
+    color: #FFF;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    
+    padding: 2px 4px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.dateCell.selected {
+    background-color: #6c4ef6;
+    border-radius: 12px;
+}

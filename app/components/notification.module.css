@@ -1,0 +1,20 @@
+.Notifications{ position: absolute; background: #1A1D1F; padding: 20px; border-radius: 10px; width: 400px;margin-top: 10px; margin-left: -300px; z-index: 9999;  }
+.Notifications h4{ font-family: var(--font-oswald); font-size: 24px; font-weight: 700;}
+.Notifications li svg {width: 50px; height: 50px;}
+.Notifications .content{display: flex; flex-wrap: wrap; align-items: flex-start; max-width: 280px;}
+.Notifications ul{list-style: none; padding: 0; margin: 0;}
+.Notifications li{display: flex; gap: 10px; align-items: flex-start; padding: 15px 0; border-bottom:#2F2F2F 1px solid ;}
+
+.topArr{position: absolute;top:-17px; right: 60px;}
+.Notifications .head{font-weight: 500; font-size: 16px; flex: 0 0 180px; max-width: 180px;}
+.Notifications .msg{font-size: 12px; color: #C7C7C8; flex: 0 0 100%; padding-top: 5px;}
+.Notifications .date{font-size: 12px; color: #C7C7C8; flex: 0 0 100px;  max-width: 100px; text-align: right;}
+
+@media (max-width:767px) {
+     .Notifications {  border-radius: 0; width: 100%; margin-top: 0; 
+       margin-left: 0;  padding: 20px; 
+}
+ .Notifications li{flex-wrap: wrap;}
+  .Notifications .content{flex: 0 0 calc(100% - 60px); max-width: calc(100% - 60px); justify-content: space-between;}
+    .Notifications h4{margin-left: 40px;} 
+}

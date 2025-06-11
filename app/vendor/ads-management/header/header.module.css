@@ -1,0 +1,39 @@
+.vendorheader {
+  background-color: white;
+  height: 4.76vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.logoDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 2.5rem;
+  padding-left: 2.5rem;
+  align-items: center;
+}
+.logoimg {
+  margin-top: 5px;
+  width: 10.8vw;
+}
+.gridline {
+  background-color: #644ee5;
+  height: 8px;
+  width: 13.4vw;
+  width: 259;
+  height: 8;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.vendorHeaderBtn {
+  width: 120px;
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  gap: 8px;
+  border-radius: 999px;
+  background-color: #f3f4f6;
+  border: 0px;
+}

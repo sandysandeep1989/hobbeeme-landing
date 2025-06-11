@@ -1,0 +1,154 @@
+.aboutTall{
+font-family: 'Poppins';
+font-weight: 700;
+font-size: 24px;
+
+text-transform: capitalize;
+color: #FFFFFF;
+margin: 0%;
+margin-bottom: 52px;
+margin-top: 24px;
+
+}
+
+.aboutTopHeading .aboutTopHeadingItem{
+    display: flex;
+    gap: 15px;
+    min-width: 350px;
+}
+
+.aboutTopHeading{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid  #2F2F2F;
+    
+
+}
+.philosophySec{
+    display: flex;
+}
+.aboutBottomHeading{
+    margin-top: 44px;
+}
+.philosophySec h3{
+font-family: 'Poppins';
+font-weight: 600;
+font-size: 18px;
+max-width: 198px;
+margin-right: 64px;
+
+
+}
+.aboutTopHeadingItem h5{
+font-family: 'Poppins';
+font-weight: 600;
+font-size: 14px;
+margin: 0;
+
+}
+.aboutTopHeadingItem span{
+font-family: 'Poppins';
+color: #FFFFFF;
+font-size: 10px;
+opacity: 60%;
+
+}
+.aboutTopHeadingItemImgDiv{
+    width: 40px;
+    height: 40px;
+    background: #644EE5;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.philosophySecOne{
+    margin-bottom: 20px;
+}
+.philosophySec p{
+font-family: 'Poppins';
+font-weight: 300;
+font-size: 14px;
+opacity: 60%;
+text-align: left;
+max-width: 763px;
+margin-bottom: 0px;
+
+
+}
+.philosophySecOne p{
+    max-width: 755px;
+}
+.philosophySecTwo p{
+    max-width: 801px;
+}
+.philosophySecTwo ul{
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    opacity: 0.6;
+    padding-left: 0;
+}
+.philosophySec h3{
+    max-width: 123px;
+}
+
+.mobileShow{
+    display: none;
+}
+
+
+
+/* responsive css */
+
+@media (max-width: 767px) {
+    .philosophySec{
+        flex-direction: column;
+    }
+
+    .aboutTopHeading{
+        flex-direction: column;
+        gap: 14px;
+    }
+    .aboutTopHeadingItemImgDiv{
+        background: transparent;
+    }
+    .mobileHide{
+        display: none;
+    }
+    .philosophySecOne{
+        margin-bottom: 14px;
+    }
+    .readMoreButton{
+        overflow: hidden;
+color: var(--Yellow, #FEEA4F);
+text-overflow: ellipsis;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 140%; /* 19.6px */
+letter-spacing: 0.28px;
+    }
+
+    .mobileShow{
+        display: block;
+    }
+    .philosophySec h3{
+        max-width: 100%;
+    }
+
+
+
+    
+}

@@ -1,0 +1,189 @@
+
+.sectionTitle{
+    color: var(--White, #FFF);
+    font-family: Poppins;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+.serviceCardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.serviceCardParent{
+    max-width: 422px;
+    background-color: #1A1D1F;
+    border-radius: 8px;
+    padding: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.serviceCardParent:hover{
+    transform: scale(1.03);
+}
+
+.serviceCard{
+    /* background-color: #191A1D; */
+    border-radius: 24px;
+    padding: 8px;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 16px;
+    width: 100%;
+    max-width: 422px;
+    display: flex;
+  
+}
+.serviceCardImage{
+    position: relative;
+    max-width: 177px;
+    width: 100%;
+
+    height: auto;
+    border-radius: 24px;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+.serviceCardImage img{
+    width: 100%;
+    height: 100%;
+         border-radius: 20px;
+    object-fit: cover;
+}
+
+.serviceCardHeart{
+    cursor: pointer;
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    top: 11px;
+    top:12px;
+    right: 13px;
+    background-color: #00000060;
+    border-radius: 999px;
+    padding: 2px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.serviceCardBadges{
+display: flex;
+gap: 8px;
+flex-wrap: wrap;
+padding-top: 12px;
+padding-bottom: 12px;
+}
+.bollywoodBadge{
+color: #FFF;
+
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+border-radius: 100px;
+
+
+background-color: #5465FF26;
+padding: 5px 10px;
+}
+
+.inStudioBadge{
+color: #FFF;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+border-radius: 4px;
+background: rgba(255, 255, 255, 0.15);
+max-height: 52px;
+padding: 0px 4px;
+display: flex;
+align-items: center;
+}
+
+
+.bollywoodBadgeParent{
+display: flex;
+justify-content: space-between;
+width: 100%;
+height: 23px;
+}
+
+.bollywoodMagic{
+color: #FFF;
+font-family: Oswald;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: capitalize;
+}
+
+.adeText{
+    color: var(--Yellow, #FEEA4F);
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;         
+}
+
+.offText{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    border-radius: 9999px;
+background: #644EE5;
+padding: 2px 6px;
+}
+.lineThroughText{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: line-through;
+    text-transform: capitalize;
+    opacity: 0.6;
+}
+
+.offLineThroughContainer{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
+.bottomBar{
+    color: #ED99DC;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+background: rgba(231, 96, 204, 0.17);
+margin-top: 2px;
+}

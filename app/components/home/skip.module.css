@@ -1,0 +1,35 @@
+.skipThe{ position: relative;  border-radius: 16px; max-width: 98%; margin: auto; overflow: hidden; background: rgba(24,25,27,1); }
+.skipThe video{ height: 616px; width: 100%; object-fit: cover; border-radius: 16px; opacity: .7;}
+.videoTxt{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%;}
+.videoTxt h3{ color: var(--foreground);  font-family: var(--font-oswald);  font-size: 48px; margin-bottom: 15px;
+    font-weight: 700;  text-transform: uppercase;}
+    
+.getVoucher{display: flex; padding: 3px 3px 3px 30px; background: #fff; max-width: fit-content; border-radius: 40px; gap: 40px; align-items: center;
+     margin: auto; color: var(--background); transition: 0.5s all; font-family: var(--font-oswald); font-weight: 700; text-transform: uppercase;}    
+.getVoucher   span{ background: var(--yellow); display: flex; width: 60px; height: 60px; border: var(--background) 1px solid; border-radius: 50%;
+align-items: center; justify-content: center; transition: 0.5s all;}   
+.getVoucher   span svg path {stroke:var(--background); transition: 0.5s all;}
+.getVoucher   span svg{transition: 0.5s all; transform: rotate(-45deg);}
+
+
+.getVoucher:hover{ background: var(--yellow);}
+.getVoucher:hover span{ background:var(--purple); border-color:var(--purple) ;}
+.getVoucher:hover span svg path{stroke: var(--foreground); }
+.getVoucher:hover span svg{transform: rotate(0deg);}
+
+
+@media(max-width:1420px){
+    .skipThe video{ height: 480px;}
+    .videoTxt{ width: 90%;}
+
+}
+
+
+@media(max-width:767){
+    .skipThe{max-width: 100%; border-radius: 0;}
+    .skipThe video{ height: 260px;  border-radius: 0;}
+    .videoTxt{ width: 90%;}
+    .videoTxt h3{font-size: 20px;}
+    .getVoucher span {width: 40px; height: 40px;}
+
+}

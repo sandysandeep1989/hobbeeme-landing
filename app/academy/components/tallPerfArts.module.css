@@ -1,0 +1,441 @@
+.tallPerfHeader{
+    background: url('/tallPerformingBg.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    position: relative;
+    z-index: 0;
+    border-radius: 12px;
+}
+
+
+.tallPerfHeaderCntr{
+    /* padding-bottom: 32px;
+     border-bottom: 1px solid #2F2F2F; */
+     border-radius: 12px;
+     /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 45.01%, #000 100%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
+}
+.tallPerfHeader::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45.01%, #000000 100%);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      border-radius: 12px;
+
+
+}
+.tallPerfHeaderInner{
+    padding-top: 21px;
+    padding-right: 11px;
+    padding-left: 24px;
+    position: relative;
+    z-index: 2;
+  
+
+}
+.tallPerfHeaderTopRightBtn{
+  
+    display: flex;
+    flex-direction: row-reverse;
+    
+
+}
+.tallPerfHeaderTopRightBtn svg{
+  margin-right: 5px;
+}
+.tallPerfHeaderTopRightBtn div{
+
+padding: 6px 19px;
+border-radius: 100px;
+
+border: 1px solid rgba(255, 255, 255, 0.25);
+background: #000;
+box-shadow: 0px 4px 24px 0px rgba(120, 120, 120, 0.25);
+backdrop-filter: blur(10px);
+color: #FFF;
+font-family: Poppins;
+font-size: 12px;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; /* 16.8px */
+
+
+
+}
+.tallPerfHeaderTopRightBtn div span{
+
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 140%;
+}
+.RattingMainDiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+      margin-top: 124px;
+      padding-bottom: 24px;
+}
+.RattingMainDiv .TallPerfHeading{
+  font-family: var(--font-oswald);
+font-weight: 500;
+font-size: 48px;
+margin-bottom: 0;
+
+
+
+}
+
+.RattingMainDiv .locationH{
+
+font-weight: 500;
+font-size: 14px;
+opacity: 0.75;
+
+
+}
+
+
+.tallPerImgCtnr{
+    background-color: #FFE9C7;
+    width: 174px;
+    height: 174px;
+    border-radius: 50%;
+}
+.rattingDivCtnr{
+    display: flex;
+    gap: 4px;
+  align-items: center;
+  gap: 4px;
+  
+}
+.rattingDivCtnr .stars img:not(:first-child) {
+  margin-left: 4px;
+}
+.rattingDivCtnr .topRattedBtn{
+    background: #644EE5;
+    padding: 5px 8px;
+
+font-weight: 600;
+font-size: 10px;
+border-radius: 3px;
+
+}
+.rattingDivCtnr .outofFive{
+
+font-weight: 500;
+font-size: 12px;
+
+
+
+}
+
+.bioDiv{
+    margin-top: 32px;
+    display: flex;
+    gap: 4.75%;
+    flex-wrap: wrap;
+
+}
+.bioDivFirstItem{
+
+    width: 52.89%;
+    display: flex;
+    gap:8.98%;
+
+    
+
+
+
+}
+
+.bioDiv span{
+  font-family: 'Poppins';
+font-weight: 600;
+font-size: 18px;
+
+
+}
+.bioDivSecItem span{
+  max-width: 123px;
+}
+.bioDivSecItem{
+    display: flex;
+    width: 42.34%;
+    gap: 11.22%;
+
+}
+.bioDivSecItem ul{
+    opacity: 60%;
+}
+.bioDivSecItem ul li{
+font-family: 'Poppins';
+font-weight: 300;
+font-size: 14px;
+
+
+}
+.bioDivFirstItem p{
+    max-width: 619px;
+    opacity: 60%;
+    font-family: 'Poppins';
+font-weight: 300;
+font-size: 14px;
+
+
+}
+
+
+.tabsWrapper {
+
+  padding: 0 16px;
+  color: white;
+}
+.tabsContainer{
+position: relative;
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #3a3a3a;
+  padding: 16px 0;
+
+}
+.tabItem {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  padding: 4px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.tabItem:hover {
+  color: #e0e0e0;
+}
+.active {
+  color: #FEEA4F; /* Yellow */
+}
+
+.fullLine {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #3a3a3a;
+  z-index: 0;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #FEEA4F; /* Yellow */
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.content {
+  /* padding: 24px 0; */
+  font-size: 18px;
+  color: #e0e0e0;
+  padding-bottom: 60px;
+}
+
+.mobileShow{
+  display: none;
+}
+
+
+
+
+/* ==================responsive css================================= */
+
+@media (max-width: 1024px) {
+    .bioDivSecItem{
+        width: 100%;
+    }
+    .bioDivFirstItem p{
+      max-width: unset;
+    }
+    .bioDivFirstItem{
+      width: 100%;
+    
+      gap: 40px;
+    }
+    .bioDivFirstItem span{
+      /* max-width: 140px; */
+      width: 140px;
+    }
+    .bioDivSecItem{
+      gap: 20px;
+    }
+    .bioDiv span{
+      min-width: 140px;
+      /* width: 100%; */
+
+    }
+    .RattingMainDiv .TallPerfHeading{
+
+    font-size: 35px;
+    margin-bottom: 0;
+    }
+
+    .tallPerfHeaderInner{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .tallPerImgCtnr{
+      background: transparent;
+      height: unset;
+      width: unset;
+    }
+  
+}
+
+
+@media (max-width: 767px) {
+  .bioDivSecItem{
+      width: 100%;
+  }
+  .RattingMainDiv .TallPerfHeading{
+
+    font-size: 19.65px;
+    margin-bottom: 0;
+    margin-left: 16px;
+    }
+    .tallPerfHeaderCntr{
+      border-bottom: none;
+    }
+    .locationDiv{
+      margin-left: 16px;
+      margin-top: 10px;
+    }
+  .tallPerfHeader{
+    background: url('/academy.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  margin-left: -10px;
+  margin-right: -10px;
+    position: relative;
+    z-index: 0;
+}
+
+.tallPerImgCtnr img{
+  opacity: 0;
+}
+.rattingDivCtnr{
+  display: none;
+}
+.tabsWrapper{
+  padding: unset;
+}
+.tallPerfHeaderTopRightBtn{
+  display: none;
+}
+.mobileHide{
+  display: none;
+}
+.mobileShow{
+  display: block;
+  margin-bottom: 16px;
+}
+.tallPerfHeaderInner{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.tallPerfHeader{
+  height: 485px;
+}
+.tallPerImgCtnr{
+  display: none;
+}
+.RattingMainDiv{
+  height: 485px;
+}
+.TextParent{
+  margin-top: auto;
+  padding-bottom: 10px;
+}
+
+.RattingMainDiv{
+  margin-top: 0;
+ 
+  /* margin-top: 10px; */
+}
+.reviewCountContainer{
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 8.303px;
+  background: #000;
+  max-width: max-content;
+  margin-bottom: 15px;
+  margin-left: 16px;
+
+}
+.reviewCount{
+  color: #FFF;
+font-family: Poppins;
+font-size: 13.284px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 15.941px */
+
+}
+.tabsContainer{
+  gap: 16px;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 475px) {
+  .bioDivFirstItem{
+    width: 100%;
+    flex-direction: column;
+  
+    gap: 16px;
+  }
+  .bioDivSecItem{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .bioDivSecItem ul{
+    opacity: 100%;
+  }
+  .bioDiv span{
+    max-width: unset;
+  }
+  .bioDivSecItem ul{
+    padding-left: 14px;
+    opacity: 100%;
+  }
+
+
+}

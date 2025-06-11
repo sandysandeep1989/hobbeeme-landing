@@ -1,0 +1,84 @@
+.dropdownWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.dropdownHeader {
+    background-color:#272b30;
+    color: white;
+  
+    border: 1px solid #272b30;
+    border-radius: 16px;
+   
+    padding: .75rem 1rem;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.dropdownHeader:focus{
+    border: 1px solid #FEEA4F;
+}
+
+.dropdownLabelSection {
+    width: 100%;
+}
+
+.dropdownBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 4px;
+}
+
+.label {
+    color: var(--Color-Gray-500, #A1A1A1);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 3px
+}
+
+.selected {
+    color: var(--Color-Netural-White, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: -0.36px;
+}
+
+.icon {
+    color: white;
+    font-size: 12px;
+}
+
+.dropdownList {
+    margin-top: 6px;
+    background-color: #1b1b1b;
+    border: 1px solid #333;
+    border-radius: 12px;
+    list-style: none;
+    padding: 6px 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.dropdownItem {
+    padding: 10px 14px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+}
+
+.dropdownItem:hover {
+    background-color: #2a2a2a;
+}
+
+.active {
+    background-color: #754ef9;
+}
