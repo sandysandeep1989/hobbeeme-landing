@@ -370,7 +370,7 @@ export default function ListingModal({ show, onHide }) {
                                 onChange={() => setAcceptTerms(!acceptTerms)}
                             />
                             <label className={`${styles.formLabel} ms-2`}>
-                                I accept <Link href="/term-and-condition" className={styles.termsLink}>Terms and Conditions</Link>
+                            I accept the Collaboration Model as stated in the  <Link href="/term-and-condition" className={styles.termsLink}>T&C</Link>
                             </label>
                             {errors.terms && <div className={styles.error}>{errors.terms}</div>}
                         </Form.Group>

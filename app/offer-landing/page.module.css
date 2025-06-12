@@ -621,6 +621,10 @@ text-transform: uppercase;
         height: 100%;
     }
 
+    .faq h4{
+        font-size: 28px !important;
+    }
+
 }
 
 
