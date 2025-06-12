@@ -76,7 +76,7 @@ export default function OfferLanding() {
                             <div className={styles.buttonWrapping}>
                                 <button onClick={() => setIsModalOpen(true)} className={`${styles.aboutBtn} `}>BECOME A PARTNER <span><ArrowDown /></span></button>
                                 <a
-                                    href="https://calendly.com/jhankaragarwal91/30min?month=2025-06"
+                                    href="https://calendly.com/jhankaragarwal91/learn-more-how-to-list-with-hobbeeme"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className={`${styles.learnMoreBtn} `}

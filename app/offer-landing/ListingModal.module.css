@@ -204,6 +204,7 @@
 
 .formGroup {
     position: relative;
+    align-items: baseline;
 }
 
 .error {

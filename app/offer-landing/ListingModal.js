@@ -313,7 +313,7 @@ export default function ListingModal({ show, onHide }) {
                             <div className="mb-4">
                                 <CustomDropdown
                                     label="I am a"
-                                    options={['Freelancer', 'Institute', 'Academy/Studio', 'Other']}
+                                    options={['Freelancer', 'Academy/institute/studio', 'Other']}
                                     selected={selectedCategory}
                                     onChange={setSelectedCategory}
                                 />
@@ -321,21 +321,21 @@ export default function ListingModal({ show, onHide }) {
                             </div>
                         </Form.Group>
 
-                        <Row className="mb-3">
-                        <Col md = {6}>
+                        
+                        <Col className='mb-3'>
                                 <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Provide UAE Business/Freelancer/ID</Form.Label>
+                                    <Form.Label className={styles.formLabel}>Provide UAE Business/Freelancer/license number</Form.Label>
                                     <Form.Control
                                         className={styles.formInput}
                                         type="text"
                                         name="businessId"
-                                        placeholder="Provide Business/Freelancer/ID"
+                                        placeholder="Provide Business/Freelancer/license number"
                                         onChange={handleChange}
                                     />
                                     {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
                                 </Form.Group>
                             </Col>
-                            <Col md = {6}>
+                            <Col className='mb-3'>
                                 <Form.Group className={styles.formGroup}>
                                     <Form.Label className={styles.formLabel}>Enter your social media link</Form.Label>
                                     <Form.Control
@@ -348,7 +348,7 @@ export default function ListingModal({ show, onHide }) {
                                     {errors.socialMediaLink && <div className={styles.error}>{errors.socialMediaLink}</div>}
                                 </Form.Group>
                             </Col>
-                        </Row>
+                       
                         
 
                         {/* License Checkbox */}
