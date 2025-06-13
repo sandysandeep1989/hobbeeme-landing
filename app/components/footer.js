@@ -50,10 +50,10 @@ export default function Footer() {
           
           </p>
           {/* <h4>REACH US AT</h4> */}
-          <p className={styles.mail}> <Phone /> +91 7854643287</p>
+          <p className={styles.mail}> <Phone /> +971586582458</p>
 
           <p className={styles.mail}> <MapPinHouse /> 
-          <span>Lumbung Hidup St 425 East<br />Java Madiun City Block ABC</span>
+          <span>Business Centre,Sharjah Publishing City Free Zone,<br /> Sharjah, United Arab Emirates<br /></span>
           </p>
         </div>
 

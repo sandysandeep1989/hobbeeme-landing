@@ -30,6 +30,7 @@ export default function ListingModal({ show, onHide }) {
     });
     const [selectedCategory, setSelectedCategory] = useState('');
     const [acceptTerms, setAcceptTerms] = useState(false);
+    const [cancellationPolicy, setCancellationPolicy] = useState('');
     const [formData, setFormData] = useState({ 
         name: '', 
         email: '', 
@@ -77,6 +78,7 @@ export default function ListingModal({ show, onHide }) {
                 other: '',
             });
             setSelectedCategory('');
+            setCancellationPolicy('');
             setAcceptTerms(false);
             setHasLicense(false);
             setFormData({ 
@@ -114,6 +116,7 @@ export default function ListingModal({ show, onHide }) {
         if (!formData.businessId.trim()) newErrors.businessId = 'Business/Freelancer ID is required';
         if (!formData.socialMediaLink.trim()) newErrors.socialMediaLink = 'Social media link is required';
         if (!selectedCategory) newErrors.category = 'Category is required';
+        if (!cancellationPolicy) newErrors.cancellationPolicy = 'Please select a cancellation policy';
         if (!hasLicense) newErrors.license = 'You must confirm you hold the necessary license(s)';
 
         // Email regex validation
@@ -153,6 +156,7 @@ export default function ListingModal({ show, onHide }) {
             services,
             serviceDescriptions,
             category: selectedCategory,
+            cancellationPolicy,
             hasLicense,
             acceptTerms,
             businessId: formData.businessId,
@@ -350,6 +354,23 @@ export default function ListingModal({ show, onHide }) {
                             </Col>
                        
                         
+
+                        {/* Cancellation Policy Dropdown */}
+                        <Form.Group className={`mb-3 ${styles.formGroup}`}>
+                            <div className="mb-4">
+                                <CustomDropdown
+                                    label="Free Cancellation Policy"
+                                    options={[
+                                        'Free cancellation before 24 hours',
+                                        'Free cancellation before 48 hours',
+                                        'Free cancellation before 72 hours',
+                                    ]}
+                                    selected={cancellationPolicy}
+                                    onChange={setCancellationPolicy}
+                                />
+                                {errors.cancellationPolicy && <div className={styles.error}>{errors.cancellationPolicy}</div>}
+                            </div>
+                        </Form.Group>
 
                         {/* License Checkbox */}
                         <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
