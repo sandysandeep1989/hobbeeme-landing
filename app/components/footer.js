@@ -46,7 +46,7 @@ export default function Footer() {
           <h4>OFFICE</h4>
           
           <p className={styles.mail}><strong> <Mail /> </strong> 
-          <span>jhankar@hobbeeme.com</span>
+          <span>Hobbeemesales@gmail.com</span>
           
           </p>
           {/* <h4>REACH US AT</h4> */}
