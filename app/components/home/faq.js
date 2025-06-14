@@ -11,7 +11,7 @@ export default function Faq() {
             <h4>FREQUENTLY ASKED QUESTIONS</h4>
             <Accordion>
                 <Accordion.Item eventKey="1">
-                    <Accordion.Header className={styles.accodionHeader}>What is Hobbe Mee?</Accordion.Header>
+                    <Accordion.Header className={styles.accodionHeader}>What is Hobbeeme?</Accordion.Header>
                     <Accordion.Body>
                         Hobbeeme is Dubai’s premier platform for hobby and creative experiences, connecting passionate instructors and studios with a community eager to explore new skills. Whether you offer art, fitness, dance, music, wellness, or unique workshops, Hobbeeme helps you reach the right audience, fill your classes, and grow your brand—without the hassle. Join us to boost visibility, simplify bookings, and be part of a vibrant creative movement across the city.
                     </Accordion.Body>
