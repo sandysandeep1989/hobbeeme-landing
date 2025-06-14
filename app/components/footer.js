@@ -2,7 +2,7 @@ import styles from './footer.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fb, Yutube} from './icons'
-import { Mail } from 'lucide-react';
+import {   Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { MapPinHouse } from 'lucide-react';
 
@@ -26,7 +26,9 @@ export default function Footer() {
             <li><Link href="/classes">Classes</Link></li>
             <li><Link href="/experience">Experience</Link></li> */}
             <li><Link href="/offer-landing">Offer Services</Link></li> 
-            <li><Link href="/term-and-condition">Terms & Conditions</Link></li>
+            <li><Link href="/terms-conditions">Terms & Conditions</Link></li>
+            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+
           </ul>
         </div>
 
@@ -74,8 +76,10 @@ export default function Footer() {
       <div className={styles.bottomBar}>
         <p className={styles.reserved}>All Right Reserved - HOBBEEME</p>
         <div className={styles.social}>
-          <Link href="/"><Fb/></Link>
-          <Link href="/"><Yutube/></Link>
+          <Link target='_blank' href="https://www.facebook.com/profile.php?id=61573751130571&mibextid=wwXIfr&rdid=wACv3UC3zottueLa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F15ddg3JQFY%2F%3Fmibextid%3DwwXIfr#"><Fb/></Link>
+          <Link href="https://www.instagram.com/hobbee.me?igsh=MWFxYnl2cjVlZnI3&utm_source=qr" target='_blank'>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          </Link>
         </div>
       </div>
     </footer>
