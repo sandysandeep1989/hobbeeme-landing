@@ -9,7 +9,7 @@ export default function Home() {
    <>
     {/* <OfferLanding/> */}
     <Header/>
-             <div style={{padding:'240px  20px 20px',  textAlign:'center', height:'calc(100vh - 350px)'}}>
+             <div style={{padding:'240px  20px 160px 20px',  textAlign:'center', minHeight:'calc(100vh - 350px)'}}>
               <p>STAY TUNED FOR</p>
            <h1 style={{fontSize:'4.5rem', fontFamily:'Oswald'}}>  SOMETHING AMAZING </h1>  
           <h3>  Launching soon in UAE</h3>
