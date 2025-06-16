@@ -496,3 +496,39 @@ background: var(--Violet, #644EE5);
    
 }
 
+.backButtonContainer {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: rgba(26, 29, 31, 0.8);
+  border: 1px solid #2F2F2F;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: rgba(26, 29, 31, 1);
+  border-color: #FFFFFF;
+}
+
+.backButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .backButtonContainer {
+    margin-bottom: 15px;
+  }
+}
+

@@ -30,7 +30,6 @@ export default function ListingModal({ show, onHide }) {
     });
     const [selectedCategory, setSelectedCategory] = useState('');
     const [acceptTerms, setAcceptTerms] = useState(false);
-    const [cancellationPolicy, setCancellationPolicy] = useState('');
     const [formData, setFormData] = useState({ 
         name: '', 
         email: '', 
@@ -78,7 +77,6 @@ export default function ListingModal({ show, onHide }) {
                 other: '',
             });
             setSelectedCategory('');
-            setCancellationPolicy('');
             setAcceptTerms(false);
             setHasLicense(false);
             setFormData({ 
@@ -116,7 +114,6 @@ export default function ListingModal({ show, onHide }) {
         if (!formData.businessId.trim()) newErrors.businessId = 'Business/Freelancer ID is required';
         if (!formData.socialMediaLink.trim()) newErrors.socialMediaLink = 'Social media link is required';
         if (!selectedCategory) newErrors.category = 'Category is required';
-        if (!cancellationPolicy) newErrors.cancellationPolicy = 'Please select a cancellation policy';
         if (!hasLicense) newErrors.license = 'You must confirm you hold the necessary license(s)';
 
         // Email regex validation
@@ -156,7 +153,6 @@ export default function ListingModal({ show, onHide }) {
             services,
             serviceDescriptions,
             category: selectedCategory,
-            cancellationPolicy,
             hasLicense,
             acceptTerms,
             businessId: formData.businessId,
@@ -212,8 +208,11 @@ export default function ListingModal({ show, onHide }) {
                         </svg>
                         </div>
                     </div>
-                    <Form onSubmit={handleSubmit} noValidate>
+
+                    <Form onSubmit={handleSubmit} noValidate >
                         {/* Name & Email */}
+
+                        <div className={styles.listinForm}>
                         <Row className="mb-3">
                             <Col md = {6}>
                                 <Form.Group className={styles.formGroup}>
@@ -356,7 +355,7 @@ export default function ListingModal({ show, onHide }) {
                         
 
                         {/* Cancellation Policy Dropdown */}
-                        <Form.Group className={`mb-3 ${styles.formGroup}`}>
+                        {/* <Form.Group className={`mb-3 ${styles.formGroup}`}>
                             <div className="mb-4">
                                 <CustomDropdown
                                     label="Free Cancellation Policy"
@@ -370,7 +369,7 @@ export default function ListingModal({ show, onHide }) {
                                 />
                                 {errors.cancellationPolicy && <div className={styles.error}>{errors.cancellationPolicy}</div>}
                             </div>
-                        </Form.Group>
+                        </Form.Group> */}
 
                         {/* License Checkbox */}
                         <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
@@ -395,6 +394,8 @@ export default function ListingModal({ show, onHide }) {
                             </label>
                             {errors.terms && <div className={styles.error}>{errors.terms}</div>}
                         </Form.Group>
+                        </div>
+                       
 
                         <Button type="submit" className={styles.submitButton} disabled={loading}>
                             {loading ? 'Submitting...' : 'Submit'}
