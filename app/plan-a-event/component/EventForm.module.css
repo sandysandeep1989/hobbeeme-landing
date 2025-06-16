@@ -29,13 +29,95 @@
  .eventHeading svg circle{ transition: 0.5s all;}
  .eventHeading svg:hover circle{stroke: var(--purple); fill: var(--purple);}    
 
+.loaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
 
+.loader {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 1s linear infinite;
+}
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  background-color: #121212;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 20px;
+}
 
+.closemodal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
 
+.successGif {
+  margin: 2rem 0;
+}
 
- @media (max-width: 767px) {
+.successImage {
+  border-radius: 50%;
+}
+
+.successTitle {
+  color: #ffffff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.successMessage {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.closeButton {
+     border-radius: 12px;
+     background: #644EE5;
+     color: #FFF;
+
+     font-family: Poppins;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: 24px;
+  border: none;
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.closeButton:hover {
+  background-color: #4b31e1;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 767px) {
      .eventPup label{
         font-size: 12px;
      }

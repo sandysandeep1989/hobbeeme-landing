@@ -45,3 +45,79 @@
     cursor: not-allowed;
   }
   
+  .customModal {
+    background: rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(20px);
+  }
+  
+  .customModal :global(.modal-content) {
+    background-color: #121212;
+    border: none;
+    border-radius: 20px;
+  }
+  
+  .customModal :global(.modal-body) {
+    padding: 0;
+  }
+  
+  .successContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    background-color: #121212;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 20px;
+  }
+  
+  .closemodal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+  
+  .successGif {
+    margin: 2rem 0;
+  }
+  
+  .successImage {
+    border-radius: 50%;
+  }
+  
+  .successTitle {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .successMessage {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .closeButton {
+    border-radius: 12px;
+    background: #644EE5;
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    border: none;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .closeButton:hover {
+    background-color: #4b31e1;
+    transform: translateY(-2px);
+  }
+  
