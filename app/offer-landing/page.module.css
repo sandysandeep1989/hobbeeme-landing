@@ -663,7 +663,7 @@ text-transform: uppercase;
 
 .whatsappButton {
     position: fixed;
-    bottom: 37%;
+    bottom: 10%;
     right: 10px;
     width: 60px;
     height: 60px;
@@ -679,7 +679,6 @@ text-transform: uppercase;
     transition: all 0.3s ease;
     z-index: 1000;
     margin-left: auto;
-    margin-right: 30px;
 }
 
 .whatsappButton:hover {
@@ -693,10 +692,16 @@ text-transform: uppercase;
 
 @media (max-width: 767px) {
     .whatsappButton {
-        bottom: 80px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        margin-right: 20px;
+        /* bottom: 80px;
+        right: 20px; */
+        width: 40px;
+        height: 40px;
+        /* margin-right: 20px; */
+    }
+}
+
+@media(max-width: 480px) {
+    .whatsappButton{
+
     }
 }

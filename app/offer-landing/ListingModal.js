@@ -6,8 +6,11 @@ import CustomDropdown from '../classes/course-detail/CustomDropDown';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Link from 'next/link';
+import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 export default function ListingModal({ show, onHide }) {
+    const router = useRouter();
     const [services, setServices] = useState({
         art: false,
         music: false,
@@ -44,10 +47,85 @@ export default function ListingModal({ show, onHide }) {
     const [hasLicense, setHasLicense] = useState(false);
 
     useEffect(() => {
+        const stateData = localStorage.getItem('listingFormState');
+        if (stateData) {
+            const state = JSON.parse(stateData);
+
+            setFormData({
+                name: state.formData?.name || '', 
+                email: state.formData?.email || '', 
+                contact: state.formData?.contact || '', 
+                businessName: state.formData?.businessName || '',
+                businessId: state.formData?.businessId || '',
+                socialMediaLink: state.formData?.socialMediaLink || ''
+            });
+
+            // Set service descriptions with null fallbacks
+            setServiceDescriptions({
+                art: state?.serviceDescriptions?.art || '',
+                music: state?.serviceDescriptions?.music || '',
+                dance: state?.serviceDescriptions?.dance || '',
+                cooking: state?.serviceDescriptions?.cooking || '',
+                fitness: state?.serviceDescriptions?.fitness || '',
+                wellbeing: state?.serviceDescriptions?.wellbeing || '',
+                sports: state?.serviceDescriptions?.sports || '',
+                other: state?.serviceDescriptions?.other || ''
+            });
+
+            // Set services with null fallbacks
+            setServices({
+                art: state.services?.art || false,
+                music: state.services?.music || false,
+                dance: state.services?.dance || false,
+                cooking: state.services?.cooking || false,
+                fitness: state.services?.fitness || false,
+                wellbeing: state.services?.wellbeing || false,
+                sports: state.services?.sports || false,
+                other: state.services?.other || false
+            });
+        }
+    }, [show]);
+
+    // Save form state to localStorage whenever it changes
+    useEffect(() => {
+        if (show) {
+            const formState = {
+                services,
+                serviceDescriptions,
+                selectedCategory,
+                acceptTerms,
+                formData,
+                hasLicense,
+                isModalOpen: true
+            };
+            localStorage.setItem('listingFormState', JSON.stringify(formState));
+        }
+    }, [services, serviceDescriptions, selectedCategory, acceptTerms, formData, hasLicense, show]);
+
+    // Handle T&C link click
+    const handleTCLinkClick = (e) => {
+        e.preventDefault();
+        const formState = {
+            services,
+            serviceDescriptions,
+            selectedCategory,
+            acceptTerms,
+            formData,
+            hasLicense,
+            isModalOpen: true,
+            isNavigatingToTC: true, 
+        };
+        localStorage.setItem('listingFormState', JSON.stringify(formState));
+        localStorage.setItem("cameFromModal", "true");
+        router.push('/term-and-condition');
+    };
+
+
+    useEffect(() => {
         if (Object.keys(errors).length > 0) {
             const timer = setTimeout(() => {
                 setErrors({});
-            }, 10000); // 10 seconds
+            }, 5000); // 10 seconds
 
             return () => clearTimeout(timer);
         }
@@ -56,42 +134,34 @@ export default function ListingModal({ show, onHide }) {
     // Reset all states when modal is closed
     useEffect(() => {
         if (!show) {
-            setServices({
-                art: false,
-                music: false,
-                dance: false,
-                cooking: false,
-                fitness: false,
-                wellbeing: false,
-                sports: false,
-                other: false
-            });
-            setServiceDescriptions({
-                art: '',
-                music: '',
-                dance: '',
-                cooking: '',
-                fitness: '',
-                wellbeing: '',
-                sports: '',
-                other: '',
-            });
-            setSelectedCategory('');
-            setAcceptTerms(false);
-            setHasLicense(false);
-            setFormData({ 
-                name: '', 
-                email: '', 
-                contact: '', 
-                businessName: '',
-                businessId: '',
-                socialMediaLink: ''
-            });
-            setLoading(false);
-            setSubmitted(false);
-            setErrors({});
+            const savedState = localStorage.getItem('listingFormState');
+            const cameFromTC = savedState && JSON.parse(savedState).isNavigatingToTC;
+    
+            if (!cameFromTC) {
+                setServices({
+                    art: false, music: false, dance: false,
+                    cooking: false, fitness: false, wellbeing: false,
+                    sports: false, other: false
+                });
+                setServiceDescriptions({
+                    art: '', music: '', dance: '',
+                    cooking: '', fitness: '', wellbeing: '',
+                    sports: '', other: '',
+                });
+                setSelectedCategory('');
+                setAcceptTerms(false);
+                setHasLicense(false);
+                setFormData({ 
+                    name: '', email: '', contact: '', 
+                    businessName: '', businessId: '', socialMediaLink: ''
+                });
+                setLoading(false);
+                setSubmitted(false);
+                setErrors({});
+            }
         }
     }, [show]);
+    
 
     const handleCheckboxChange = (service, value) => {
         setServices(prev => ({ ...prev, [service]: value }));
@@ -168,11 +238,6 @@ export default function ListingModal({ show, onHide }) {
 
             if (!res.ok) throw new Error('Failed to send');
             setSubmitted(true);
-            toast.success('🎉 Thank you for your submission!');
-            // Close modal after showing success toast
-            setTimeout(() => {
-                onHide();
-            }, 1500); // 1.5 second delay to show the success message
         } catch (err) {
             console.error('Send failed', err);
             toast.error('Something went wrong. Please try again.');
@@ -199,209 +264,246 @@ export default function ListingModal({ show, onHide }) {
     return (
         <Modal show={show} onHide={onHide} centered dialogClassName={styles.customModal}>
             <Modal.Body>
-                <>
-                    <div className={styles.listingHeader}>
-                        <div className={styles.modalTitle}>
-                        <h4>Start Listing</h4>
+                {submitted ? (
+                    <div className={styles.successContainer}>
+                        <div className={styles.closemodal}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" onClick={onHide} style={{cursor:'pointer'}}>
-                            <path d="M16.2431 7.75738L7.75781 16.2427M16.2431 16.2426L7.75781 7.75732" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
+                                    <path d="M16.2431 7.75738L7.75781 16.2427M16.2431 16.2426L7.75781 7.75732" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
                         </div>
-                    </div>
-
-                    <Form onSubmit={handleSubmit} noValidate >
-                        {/* Name & Email */}
-
-                        <div className={styles.listinForm}>
-                        <Row className="mb-3">
-                            <Col md = {6}>
-                                <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Name</Form.Label>
-                                    <Form.Control
-                                        className={styles.formInput}
-                                        type="text"
-                                        name="name"
-                                        placeholder="Enter your name"
-                                        onChange={handleChange}
-                                    />
-                                    {errors.name && <div className={styles.error}>{errors.name}</div>}
-                                </Form.Group>
-                            </Col>
-                            <Col md = {6}>
-                                <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Email</Form.Label>
-                                    <Form.Control
-                                        className={styles.formInput}
-                                        type="email"
-                                        name="email"
-                                        placeholder="Enter your email"
-                                        onChange={handleChange}
-                                    />
-                                    {errors.email && <div className={styles.error}>{errors.email}</div>}
-                                </Form.Group>
-                            </Col>
-                        </Row>
-
-                        {/* Contact & Business Name */}
-                        <Row className="mb-3">
-                        <Col md = {6}>
-                                <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Contact Number</Form.Label>
-                                    <Form.Control
-                                        className={styles.formInput}
-                                        type="tel"
-                                        name="contact"
-                                        placeholder="Contact Number"
-                                        onChange={handleChange}
-                                    />
-                                    {errors.contact && <div className={styles.error}>{errors.contact}</div>}
-                                </Form.Group>
-                            </Col>
-                            <Col md = {6}>
-                                <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Business Name</Form.Label>
-                                    <Form.Control
-                                        className={styles.formInput}
-                                        type="text"
-                                        name="businessName"
-                                        placeholder="Business Name"
-                                        onChange={handleChange}
-                                    />
-                                    {errors.businessName && <div className={styles.error}>{errors.businessName}</div>}
-                                </Form.Group>
-                            </Col>
-                        </Row>
-
-                        {/* Business ID & Social Media Link */}
-                     
-
-                        {/* Services Section */}
-                        <Form.Group className={`mb-3 ${styles.formGroup}`}>
-                            <Form.Label className={styles.formLabel}><strong>What all services you want to list with us?</strong></Form.Label>
-
-                            {['art', 'music', 'dance', 'cooking', 'fitness', 'wellbeing', 'sports', 'other'].map((key) => (
-                                <div key={key} className="mb-3">
-                                    <div className={`${styles.checkboxRow} mt-2`}>
-                                        <CustomCheckbox
-                                            checked={services[key]}
-                                            onChange={(val) => handleCheckboxChange(key, val)}
-                                        />
-                                        <label className={styles.formLabel}>
-                                            {key.charAt(0).toUpperCase() + key.slice(1)}
-                                        </label>
-                                    </div>
-                                    {services[key] && (
-                                        <div className="d-flex flex-column">
-                                            <Form.Control
-                                                className={`mt-2 ${styles.formTextarea}`}
-                                                as="textarea"
-                                                rows={2}
-                                                placeholder={servicePlaceholders[key]}
-                                                value={serviceDescriptions[key]}
-                                                onChange={(e) => handleDescriptionChange(key, e.target.value)}
-                                            />
-                                            {errors[`service_${key}`] && (
-                                                <div className={`${styles.errors} mt-1`}>
-                                                    {errors[`service_${key}`]}
-                                                </div>
-                                            )}
-                                        </div>
-                                    )}
-                                </div>
-                            ))}
-                        </Form.Group>
-
-                        {/* Custom Dropdown */}
-                        <Form.Group className={`mb-3 ${styles.formGroup}`}>
-                            <div className="mb-4">
-                                <CustomDropdown
-                                    label="I am a"
-                                    options={['Freelancer', 'Academy/institute/studio', 'Other']}
-                                    selected={selectedCategory}
-                                    onChange={setSelectedCategory}
-                                />
-                                {errors.category && <div className={styles.error}>{errors.category}</div>}
-                            </div>
-                        </Form.Group>
-
-                        
-                        <Col className='mb-3'>
-                                <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Provide UAE Business/Freelancer/license number</Form.Label>
-                                    <Form.Control
-                                        className={styles.formInput}
-                                        type="text"
-                                        name="businessId"
-                                        placeholder="Provide Business/Freelancer/license number"
-                                        onChange={handleChange}
-                                    />
-                                    {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
-                                </Form.Group>
-                            </Col>
-                            <Col className='mb-3'>
-                                <Form.Group className={styles.formGroup}>
-                                    <Form.Label className={styles.formLabel}>Enter your social media link</Form.Label>
-                                    <Form.Control
-                                        className={styles.formInput}
-                                        type="text"
-                                        name="socialMediaLink"
-                                        placeholder="Provide Instagram/Facebook/Link"
-                                        onChange={handleChange}
-                                    />
-                                    {errors.socialMediaLink && <div className={styles.error}>{errors.socialMediaLink}</div>}
-                                </Form.Group>
-                            </Col>
-                       
-                        
-
-                        {/* Cancellation Policy Dropdown */}
-                        {/* <Form.Group className={`mb-3 ${styles.formGroup}`}>
-                            <div className="mb-4">
-                                <CustomDropdown
-                                    label="Free Cancellation Policy"
-                                    options={[
-                                        'Free cancellation before 24 hours',
-                                        'Free cancellation before 48 hours',
-                                        'Free cancellation before 72 hours',
-                                    ]}
-                                    selected={cancellationPolicy}
-                                    onChange={setCancellationPolicy}
-                                />
-                                {errors.cancellationPolicy && <div className={styles.error}>{errors.cancellationPolicy}</div>}
-                            </div>
-                        </Form.Group> */}
-
-                        {/* License Checkbox */}
-                        <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
-                            <CustomCheckbox
-                                checked={hasLicense}
-                                onChange={() => setHasLicense(!hasLicense)}
+                        <div className={styles.successGif}>
+                            <Image
+                                src="/thankyou.gif"
+                                alt="Success"
+                                width={100}
+                                height={100}
+                                className={styles.successImage}
                             />
-                            <label className={`${styles.formLabel} ms-2`}>
-                                I hold the necessary license/s to Teach, Host or Conduct the listed services in UAE
-                            </label>
-                            {errors.license && <div className={styles.error}>{errors.license}</div>}
-                        </Form.Group>
-
-                        {/* Terms & Conditions */}
-                        <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
-                            <CustomCheckbox
-                                checked={acceptTerms}
-                                onChange={() => setAcceptTerms(!acceptTerms)}
-                            />
-                            <label className={`${styles.formLabel} ms-2`}>
-                            I accept the Collaboration Model as stated in the  <Link href="/term-and-condition" className={styles.termsLink}>T&C</Link>
-                            </label>
-                            {errors.terms && <div className={styles.error}>{errors.terms}</div>}
-                        </Form.Group>
                         </div>
-                       
-
-                        <Button type="submit" className={styles.submitButton} disabled={loading}>
-                            {loading ? 'Submitting...' : 'Submit'}
+                        <h3 className={styles.successTitle}>Thank You!</h3>
+                        <p className={styles.successMessage}>We will get back to you soon.</p>
+                        <Button 
+                            className={styles.closeButton} 
+                            onClick={onHide}
+                        >
+                            Close
                         </Button>
-                    </Form>
-                </>
+                    </div>
+                ) : (
+                    <>
+                        <div className={styles.listingHeader}>
+                            <div className={styles.modalTitle}>
+                                <h4>Start Listing</h4>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" onClick={onHide} style={{cursor:'pointer'}}>
+                                    <path d="M16.2431 7.75738L7.75781 16.2427M16.2431 16.2426L7.75781 7.75732" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <Form onSubmit={handleSubmit} noValidate>
+                            {/* Name & Email */}
+
+                            <div className={styles.listinForm}>
+                            <Row className="mb-3">
+                                <Col md = {6}>
+                                    <Form.Group className={styles.formGroup}>
+                                        <Form.Label className={styles.formLabel}>Name</Form.Label>
+                                        <Form.Control
+                                            className={styles.formInput}
+                                            type="text"
+                                            name="name"
+                                            value={formData.name}
+                                            placeholder="Enter your name"
+                                            onChange={handleChange}
+                                        />
+                                        {errors.name && <div className={styles.error}>{errors.name}</div>}
+                                    </Form.Group>
+                                </Col>
+                                <Col md = {6}>
+                                    <Form.Group className={styles.formGroup}>
+                                        <Form.Label className={styles.formLabel}>Email</Form.Label>
+                                        <Form.Control
+                                            className={styles.formInput}
+                                            type="email"
+                                            name="email"
+                                            value={formData.email}
+                                            placeholder="Enter your email"
+                                            onChange={handleChange}
+                                        />
+                                        {errors.email && <div className={styles.error}>{errors.email}</div>}
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+
+                            {/* Contact & Business Name */}
+                            <Row className="mb-3">
+                            <Col md = {6}>
+                                    <Form.Group className={styles.formGroup}>
+                                        <Form.Label className={styles.formLabel}>Contact Number</Form.Label>
+                                        <Form.Control
+                                            className={styles.formInput}
+                                            type="tel"
+                                            name="contact"
+                                            value={formData.contact}
+                                            placeholder="Contact Number"
+                                            onChange={handleChange}
+                                        />
+                                        {errors.contact && <div className={styles.error}>{errors.contact}</div>}
+                                    </Form.Group>
+                                </Col>
+                                <Col md = {6}>
+                                    <Form.Group className={styles.formGroup}>
+                                        <Form.Label className={styles.formLabel}>Business Name</Form.Label>
+                                        <Form.Control
+                                            className={styles.formInput}
+                                            type="text"
+                                            name="businessName"
+                                            value={formData.businessName}
+                                            placeholder="Business Name"
+                                            onChange={handleChange}
+                                        />
+                                        {errors.businessName && <div className={styles.error}>{errors.businessName}</div>}
+                                    </Form.Group>
+                                </Col>
+                            </Row>
+
+                            {/* Business ID & Social Media Link */}
+                         
+
+                            {/* Services Section */}
+                            <Form.Group className={`mb-3 ${styles.formGroup}`}>
+                                <Form.Label className={styles.formLabel}><strong>What all services you want to list with us?</strong></Form.Label>
+
+                                {['art', 'music', 'dance', 'cooking', 'fitness', 'wellbeing', 'sports', 'other'].map((key) => (
+                                    <div key={key} className="mb-3">
+                                        <div className={`${styles.checkboxRow} mt-2`}>
+                                            <CustomCheckbox
+                                                checked={services[key] || false}
+                                                onChange={(val) => handleCheckboxChange(key, val)}
+                                            />
+                                            <label className={styles.formLabel}>
+                                                {key.charAt(0).toUpperCase() + key.slice(1)}
+                                            </label>
+                                        </div>
+                                        {services[key] && (
+                                            <div className="d-flex flex-column">
+                                                <Form.Control
+                                                    className={`mt-2 ${styles.formTextarea}`}
+                                                    as="textarea"
+                                                    rows={2}
+                                                    placeholder={servicePlaceholders[key]}
+                                                    value={serviceDescriptions[key]}
+                                                    onChange={(e) => handleDescriptionChange(key, e.target.value)}
+                                                />
+                                                {errors[`service_${key}`] && (
+                                                    <div className={`${styles.errors} mt-1`}>
+                                                        {errors[`service_${key}`]}
+                                                    </div>
+                                                )}
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </Form.Group>
+
+                            {/* Custom Dropdown */}
+                            <Form.Group className={`mb-3 ${styles.formGroup}`}>
+                                <div className="mb-4">
+                                    <CustomDropdown
+                                        label="I am a"
+                                        options={['Freelancer', 'Academy/institute/studio', 'Other']}
+                                        selected={selectedCategory}
+                                        onChange={setSelectedCategory}
+                                    />
+                                    {errors.category && <div className={styles.error}>{errors.category}</div>}
+                                </div>
+                            </Form.Group>
+
+                            
+                            <Col className='mb-3'>
+                                    <Form.Group className={styles.formGroup}>
+                                        <Form.Label className={styles.formLabel}>Provide UAE Business/Freelancer/license number</Form.Label>
+                                        <Form.Control
+                                            className={styles.formInput}
+                                            type="text"
+                                            name="businessId"
+                                            placeholder="Provide Business/Freelancer/license number"
+                                            onChange={handleChange}
+                                        />
+                                        {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
+                                    </Form.Group>
+                                </Col>
+                                <Col className='mb-3'>
+                                    <Form.Group className={styles.formGroup}>
+                                        <Form.Label className={styles.formLabel}>Enter your social media link</Form.Label>
+                                        <Form.Control
+                                            className={styles.formInput}
+                                            type="text"
+                                            name="socialMediaLink"
+                                            placeholder="Provide Instagram/Facebook/Link"
+                                            onChange={handleChange}
+                                        />
+                                        {errors.socialMediaLink && <div className={styles.error}>{errors.socialMediaLink}</div>}
+                                    </Form.Group>
+                                </Col>
+                           
+                            
+
+                            {/* Cancellation Policy Dropdown */}
+                            {/* <Form.Group className={`mb-3 ${styles.formGroup}`}>
+                                <div className="mb-4">
+                                    <CustomDropdown
+                                        label="Free Cancellation Policy"
+                                        options={[
+                                            'Free cancellation before 24 hours',
+                                            'Free cancellation before 48 hours',
+                                            'Free cancellation before 72 hours',
+                                        ]}
+                                        selected={cancellationPolicy}
+                                        onChange={setCancellationPolicy}
+                                    />
+                                    {errors.cancellationPolicy && <div className={styles.error}>{errors.cancellationPolicy}</div>}
+                                </div>
+                            </Form.Group> */}
+
+                            {/* License Checkbox */}
+                            <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
+                                <CustomCheckbox
+                                    checked={hasLicense}
+                                    onChange={() => setHasLicense(!hasLicense)}
+                                />
+                                <label className={`${styles.formLabel} ms-2`}>
+                                    I hold the necessary license/s to Teach, Host or Conduct the listed services in UAE
+                                </label>
+                                {errors.license && <div className={styles.error}>{errors.license}</div>}
+                            </Form.Group>
+
+                            {/* Terms & Conditions */}
+                            <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
+                                <CustomCheckbox
+                                    checked={acceptTerms}
+                                    onChange={() => setAcceptTerms(!acceptTerms)}
+                                />
+                                <label className={`${styles.formLabel} ms-2`}>
+                                    I accept the Collaboration Model as stated in the{' '}
+                                    <div 
+                                        className={styles.termsLink}
+                                        onClick={handleTCLinkClick}
+                                    >
+                                        T&C
+                                    </div>
+                                </label>
+                                {errors.terms && <div className={styles.error}>{errors.terms}</div>}
+                            </Form.Group>
+                            </div>
+                           
+
+                            <Button type="submit" className={styles.submitButton} disabled={loading}>
+                                {loading ? 'Submitting...' : 'Submit'}
+                            </Button>
+                        </Form>
+                    </>
+                )}
             </Modal.Body>
             <ToastContainer position="top-right" autoClose={3000} />
         </Modal>

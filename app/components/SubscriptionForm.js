@@ -38,7 +38,7 @@ export default function SubscriptionForm() {
         throw new Error(data.error || 'Something went wrong')
       }
 
-      toast.success('Thank you for subscribing!')
+      toast.success('We will Notify You very Soon!')
       setEmail('') // Clear the input
     } catch (error) {
       toast.error(error.message)

@@ -257,3 +257,66 @@
     }
 
 }
+
+.successContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.successGif {
+    margin-bottom: 24px;
+}
+
+.successImage {
+    border-radius: 12px;
+}
+
+.successTitle {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.successMessage {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 32px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.closeButton {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #644EE5;
+    border-radius: 30px;
+    padding: 12px 32px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.closeButton:hover {
+    background-color: #644EE5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(100, 78, 229, 0.2);
+}
+
+.closeButton:active {
+    transform: translateY(0);
+}
+
+.closemodal{
+   position: absolute;
+   right: 0;
+   top: 0;
+}

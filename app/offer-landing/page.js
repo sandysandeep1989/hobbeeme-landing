@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
 import Header from '@/app/components/header';
@@ -81,6 +81,32 @@ const WhatsAppButton = () => {
 
 export default function OfferLanding() {
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Check for saved modal state on component mount
+    useEffect(() => {
+        const savedState = localStorage.getItem('cameFromModal');
+        const formData = localStorage.getItem('listingFormState');
+
+        if (savedState === 'true') {
+            setIsModalOpen(true);
+            // Only remove after setting the state
+            setTimeout(() => {
+                localStorage.removeItem('cameFromModal');
+            }, 100);
+        }
+
+        // If we have form data, ensure it's preserved
+        // if (formData) {
+        //     const state = JSON.parse(formData);
+        //     if (state.isNavigatingToTC) {
+        //         // Keep the form data in localStorage
+        //         state.isNavigatingToTC = false;
+        //         localStorage.setItem('listingFormState', JSON.stringify(state));
+        //     }
+        // }
+    }, []);
+
+    
 
     return (
         <div className={styles.termsAndConditionPage}>
@@ -188,7 +214,21 @@ export default function OfferLanding() {
             </div>
             <Footer />
 
-            <ListingModal show={isModalOpen} onHide={() => setIsModalOpen(false)} />
+            <ListingModal 
+                show={isModalOpen} 
+                onHide={() => {
+                    const savedState = localStorage.getItem('listingFormState');
+                    if (savedState) {
+                        const state = JSON.parse(savedState);
+                        if (!state.isNavigatingToTC) {
+                            setIsModalOpen(false);
+                            localStorage.removeItem('listingFormState');
+                        }
+                    } else {
+                        setIsModalOpen(false);
+                    }
+                }} 
+            />
         </div>
     );
 }

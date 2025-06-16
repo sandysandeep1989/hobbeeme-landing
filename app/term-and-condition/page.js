@@ -7,6 +7,19 @@ import { useRouter } from 'next/navigation';
 const TermsConditions = () => {
   const router = useRouter();
 
+  const handleBack = () => {
+    const savedState = localStorage.getItem('listingFormState');
+    if (savedState) {
+      const state = JSON.parse(savedState);
+      // Keep the modal state but remove the navigation flag
+      state.isNavigatingToTC = false;
+      state.isModalOpen = true;
+      localStorage.setItem('listingFormState', JSON.stringify(state));
+      localStorage.setItem('cameFromModal', 'true')
+    }
+    router.back();
+  };
+
   return (
     <div className={styles.termsAndCondition}>
       
@@ -14,13 +27,13 @@ const TermsConditions = () => {
       <div className={styles.termsAndConditionWrapping}>
       <div className={styles.backButtonContainer}>
         <button 
-          onClick={() => router.back()} 
+          onClick={handleBack} 
           className={styles.backButton}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
             <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          Back
+          
         </button>
       </div>
       <div className={`${styles.accountPageSavedCol} ${styles.accountPage}`}>

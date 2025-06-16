@@ -1,5 +1,5 @@
 .eventPup{  background: rgba(0, 0, 0, 0.10);
-    backdrop-filter: blur(20px); position: fixed; z-index:90; 
+    backdrop-filter: blur(20px); position: fixed; z-index:9999; 
     top: 0; left: 0; height: 100%; width: 100%;} 
 
 .eventFormContainer {background-color: #121212; color: #fff; padding:15px 30px 30px 30px; border-radius: 20px; max-width: 900px; margin: 0 auto;}

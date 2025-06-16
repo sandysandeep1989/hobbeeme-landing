@@ -505,10 +505,10 @@ background: var(--Violet, #644EE5);
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  background: rgba(26, 29, 31, 0.8);
-  border: 1px solid #2F2F2F;
-  border-radius: 8px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 50%;
   color: #FFFFFF;
   font-size: 16px;
   cursor: pointer;
@@ -516,8 +516,14 @@ background: var(--Violet, #644EE5);
 }
 
 .backButton:hover {
-  background: rgba(26, 29, 31, 1);
-  border-color: #FFFFFF;
+  background: #644EE5;
+  border-color: #644EE5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(100, 78, 229, 0.2);
+}
+
+.backButton:active {
+  transform: translateY(0);
 }
 
 .backButton svg {
