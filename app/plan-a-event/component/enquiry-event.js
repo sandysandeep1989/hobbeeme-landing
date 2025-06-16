@@ -114,6 +114,7 @@ const EventForm = ({popClose, eventSelect, eventVal}) => {
           <input type="date" name="date" value={formData.date} onChange={handleChange} className={styles.input} />
           {errors.date && <p className={styles.error}>{errors.date}</p>}
         </div>
+        <div cla></div>
         
         <div className="col-12">
           <label>Additional Information</label>
