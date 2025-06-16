@@ -39,11 +39,8 @@ const events = [
   },
 ];
 
-
 export default function PlanAEventPage() {
-
   const [popOpen, setPopOpen] = useState(false);
-
   const eventTitle = events.map((item) => item.title);
   const [eventVal, setEventValue] = useState('');
 
@@ -56,7 +53,6 @@ export default function PlanAEventPage() {
     setPopOpen(true);
   }
 
-
   return (
     <>
       {/* <Header /> */}
@@ -66,10 +62,9 @@ export default function PlanAEventPage() {
             <div className={styles.planTag}>PLAN AN EVENT</div>
             <h1>PLAN Your <span>Perfect Event</span></h1>
             <p className={styles.headingText}> Whether you're dreaming up a birthday bash, a hands-on workshop, or a chill gathering with friends—<strong>Hobbeeme is here to bring your event to life.</strong>
-              We’ll help you find the perfect activity, venue, and local experts to make it unforgettable.</p>
+              We'll help you find the perfect activity, venue, and local experts to make it unforgettable.</p>
           </div>
         </div>
-
 
         {popOpen && <EventForm eventSelect={eventTitle} eventVal={eventVal} popClose={popUp} />}
 
@@ -79,7 +74,7 @@ export default function PlanAEventPage() {
             <div className="row ">
               {events.map((event, index) => (
                 <div className={`col-md-6  ${styles.cardBottom}`} key={index}>
-                  <div className={styles.card} onClick={() => { eventSelect(event.title) }}>
+                  <div className={styles.card} onClick={() => eventSelect(event.title)}>
                     <div className={styles.imageCard}>
                       <Image
                         src={event.image}
@@ -97,7 +92,6 @@ export default function PlanAEventPage() {
                           <rect x="1" y="0.5" width="31" height="31" rx="15.5" stroke="white" />
                           <path d="M14.5603 17.4545L16.4997 19.3939M16.4997 19.3939L18.4531 17.4545M16.4997 19.3939L16.4997 13.0909" stroke="white" strokeWidth="1.09091" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-
                       </a>
                     </div>
                   </div>

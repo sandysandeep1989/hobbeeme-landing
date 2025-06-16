@@ -1,11 +1,17 @@
 // components/EventForm.js
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./EventForm.module.css";
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+const corporateEvents = [
+  "Corporate Events",
+  "Team Building & Employee Engagement",
+  "Corporate Social Responsibility"
+];
 
 const EventForm = ({popClose, eventSelect, eventVal}) => {
     
@@ -13,13 +19,31 @@ const EventForm = ({popClose, eventSelect, eventVal}) => {
     fullName: "",
     email: "",
     phone: "",
-    eventType: "",
+    eventType: eventVal || "",
     guests: "",
     date: "",
     message: "",
+    companyName: "",
   });
 
   const [errors, setErrors] = useState({});
+  const [isCorporateEvent, setIsCorporateEvent] = useState(false);
+
+  // Set initial event type and corporate status
+  useEffect(() => {
+    if (eventVal) {
+      setFormData(prev => ({
+        ...prev,
+        eventType: eventVal
+      }));
+      setIsCorporateEvent(corporateEvents.includes(eventVal));
+    }
+  }, [eventVal]);
+
+  // Update corporate status when event type changes
+  useEffect(() => {
+    setIsCorporateEvent(corporateEvents.includes(formData.eventType));
+  }, [formData.eventType]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -33,10 +57,13 @@ const EventForm = ({popClose, eventSelect, eventVal}) => {
     if (!formData.email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Email is invalid";
     if (!formData.phone) newErrors.phone = "Phone Number is required";
-    // if (!formData.eventType) newErrors.eventType = "Event Type is required";
     if (!formData.guests) newErrors.guests = "Guest count is required";
     if (!formData.date) newErrors.date = "Event Date is required";
-
+    
+    // Add company name validation for corporate events
+    if (isCorporateEvent && !formData.companyName) {
+      newErrors.companyName = "Company Name is required for corporate events";
+    }
 
     return newErrors;
   };
@@ -83,38 +110,55 @@ const EventForm = ({popClose, eventSelect, eventVal}) => {
           <label>Email Address</label>
           <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="your@email.com" className={styles.input} />
               {errors.email && <p className={styles.error}>{errors.email}</p>}
-
         </div>
+
         <div className="col-md-6">
           <label>Phone Number</label>
           <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="+1 (456 345 2345)" className={styles.input} />
           {errors.phone && <p className={styles.error}>{errors.phone}</p>}
-
         </div>
+
         <div className="col-md-6">
           <label>Event Type</label>
-          <select name="eventType" value={formData.eventType} onChange={handleChange} className={styles.input}>
-          {eventVal && <option value={eventVal}>{eventVal}</option>}
-            {eventSelect
-            .filter((item) => item !== eventVal)
-            .map((item, index) =>(
-                <option value={item} key={index}>{item}</option> 
+          <select 
+            name="eventType" 
+            value={formData.eventType} 
+            onChange={handleChange} 
+            className={styles.input}
+          >
+            <option value="">Select Event Type</option>
+            {eventSelect.map((item, index) => (
+              <option value={item} key={index}>{item}</option>
             ))}
           </select>
-
         </div>
+
+        {isCorporateEvent && (
+          <div className="col-md-6">
+            <label>Company Name</label>
+            <input 
+              type="text" 
+              name="companyName" 
+              value={formData.companyName} 
+              onChange={handleChange} 
+              placeholder="Enter Company Name" 
+              className={styles.input} 
+            />
+            {errors.companyName && <p className={styles.error}>{errors.companyName}</p>}
+          </div>
+        )}
+
         <div className="col-md-6">
           <label>Number Of Guests</label>
           <input type="number" name="guests" value={formData.guests} onChange={handleChange} placeholder="Estimated Guest Count" className={styles.input} />
           {errors.guests && <p className={styles.error}>{errors.guests}</p>}
-
         </div>
+
         <div className="col-md-6">
           <label>Event Date</label>
           <input type="date" name="date" value={formData.date} onChange={handleChange} className={styles.input} />
           {errors.date && <p className={styles.error}>{errors.date}</p>}
         </div>
-        <div cla></div>
         
         <div className="col-12">
           <label>Additional Information</label>
