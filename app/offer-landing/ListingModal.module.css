@@ -287,8 +287,18 @@
 .successMessage {
     color: #fff;
     font-size: 18px;
-    margin-bottom: 32px;
+    margin-bottom: 12px;
     font-family: 'Poppins', sans-serif;
+    background: rgba(39, 43, 48, 0.8);
+    padding: 16px 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.greetings{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
 }
 
 .closeButton {

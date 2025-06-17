@@ -281,7 +281,8 @@ export default function ListingModal({ show, onHide }) {
                             />
                         </div>
                         <h3 className={styles.successTitle}>Thank You!</h3>
-                        <p className={styles.successMessage}>We will get back to you soon.</p>
+                        <p className={styles.successMessage}>Your form has been submitted successfully</p>
+                        <p className={styles.greetings}>We appreiciate you taking the time to fill out our form. We've received your submission and will process it promptly</p>
                         <Button 
                             className={styles.closeButton} 
                             onClick={onHide}

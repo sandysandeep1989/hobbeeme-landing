@@ -1,6 +1,8 @@
 .eventPup{  background: rgba(0, 0, 0, 0.10);
     backdrop-filter: blur(20px); position: fixed; z-index:9999; 
-    top: 0; left: 0; height: 100%; width: 100%;} 
+    top: 0; left: 0; height: 100%; width: 100%;
+  
+} 
 
 .eventFormContainer {background-color: #121212; color: #fff; padding:15px 30px 30px 30px; border-radius: 20px; max-width: 900px; margin: 0 auto;}
 
@@ -65,8 +67,9 @@
   position: relative;
   background-color: #121212;
   max-width: 600px;
-  margin: auto;
+  width: 100%;
   border-radius: 20px;
+  min-height: 400px;
 }
 
 .closemodal {
@@ -91,11 +94,21 @@
 }
 
 .successMessage {
-  color: #ffffff;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  background: rgba(39, 43, 48, 0.8);
+  padding: 16px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
 }
 
+.greetings{
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+}
 .closeButton {
      border-radius: 12px;
      background: #644EE5;

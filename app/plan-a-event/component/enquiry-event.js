@@ -130,15 +130,20 @@ const EventForm = ({popClose, eventSelect, eventVal}) => {
 
   return (
     <div className={styles.eventPup}>
-        <div className={styles.eventHeading}>
-                 <svg width="52" height="52" viewBox="0 0 52 52" onClick={popHide} fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="26" cy="26" r="25.5" fill="#242424" stroke="white"/>
-                <path d="M30.0377 21.0956L21.0938 30.0396M30.0377 30.0395L21.0938 21.0956" stroke="white" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                 <h2>Tell Us About Your Event</h2>  
-             </div>
+       
+          <div className={styles.eventHeading}>
+                   <svg width="52" height="52" viewBox="0 0 52 52" onClick={popHide} fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="26" cy="26" r="25.5" fill="#242424" stroke="white"/>
+                  <path d="M30.0377 21.0956L21.0938 30.0396M30.0377 30.0395L21.0938 21.0956" stroke="white" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                   <h2>Tell Us About Your Event</h2>  
+               </div>
+       
     {submitted ? (
       <div className={styles.successContainer}>
+        <div>
+
+        </div>
         <div className={styles.closemodal}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" onClick={popHide} style={{cursor:'pointer'}}>
             <path d="M16.2431 7.75738L7.75781 16.2427M16.2431 16.2426L7.75781 7.75732" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -154,7 +159,8 @@ const EventForm = ({popClose, eventSelect, eventVal}) => {
           />
         </div>
         <h3 className={styles.successTitle}>Thank You!</h3>
-        <p className={styles.successMessage}>We will get back to you soon.</p>
+        <p className={styles.successMessage}>Your form has been submitted successfully</p>
+        <p className={styles.greetings}>We appreiciate you taking the time to fill out our form. We've received your submission and will process it promptly</p>
         <button 
           className={styles.closeButton} 
           onClick={popHide}
