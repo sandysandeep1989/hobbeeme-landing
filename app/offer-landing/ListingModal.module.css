@@ -211,16 +211,25 @@
 
 .formGroup {
     position: relative;
-    align-items: baseline;
+    align-items: baseline !important;
 }
 
 .error {
-    
+    display: block;
+    color: #dc3545;
+    font-size: 0.875rem;
+}
+
+.errordif{
+    position: absolute;
+    bottom: -20px;
+    left: 0;
     color: #dc3545;
     font-size: 0.875rem;
 }
 
 .errors{
+    display: block;
     color: #dc3545;
     font-size: 0.875rem;
 }

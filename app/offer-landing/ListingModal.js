@@ -434,9 +434,10 @@ export default function ListingModal({ show, onHide }) {
                                         selected={selectedCategory}
                                         onChange={setSelectedCategory}
                                     />
-                                    {errors.category && <div className={styles.error}>{errors.category}</div>}
+                                   
                                 </div>
                             </Form.Group>
+                            {errors.category && <div className={styles.error}>{errors.category}</div>}
 
                             
                             <Col className='mb-3'>
@@ -450,8 +451,9 @@ export default function ListingModal({ show, onHide }) {
                                             placeholder="Provide Business/Freelancer/license number"
                                             onChange={handleChange}
                                         />
-                                        {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
+                                        
                                     </Form.Group>
+                                    {errors.businessId && <div className={styles.error}>{errors.businessId}</div>}
                                 </Col>
                                 <Col className='mb-3'>
                                     <Form.Group className={styles.formGroup}>
@@ -496,8 +498,9 @@ export default function ListingModal({ show, onHide }) {
                                 <label className={`${styles.formLabel} ms-2`}>
                                     I hold the necessary license/s to Teach, Host or Conduct the listed services in UAE
                                 </label>
-                                {errors.license && <div className={styles.error}>{errors.license}</div>}
+                                {errors.license && <div className={styles.errordif}>{errors.license}</div>}
                             </Form.Group>
+                           
 
                             {/* Terms & Conditions */}
                             <Form.Group className={`mb-4 d-flex align-items-center ${styles.formGroup}`}>
@@ -507,15 +510,16 @@ export default function ListingModal({ show, onHide }) {
                                 />
                                 <label className={`${styles.formLabel} ms-2`}>
                                     I accept the Collaboration Model as stated in the{' '}
-                                    <div 
+                                    <span 
                                         className={styles.termsLink}
                                         onClick={handleTCLinkClick}
                                     >
                                         T&C
-                                    </div>
+                                    </span>
                                 </label>
-                                {errors.terms && <div className={styles.error}>{errors.terms}</div>}
+                                {errors.terms && <div className={styles.errordif}>{errors.terms}</div>}
                             </Form.Group>
+                            
                             </div>
                            
 
