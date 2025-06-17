@@ -60,7 +60,7 @@ export default function ListingModal({ show, onHide }) {
                 socialMediaLink: state.formData?.socialMediaLink || ''
             });
 
-            // Set service descriptions with null fallbacks
+            
             setServiceDescriptions({
                 art: state?.serviceDescriptions?.art || '',
                 music: state?.serviceDescriptions?.music || '',
@@ -72,7 +72,7 @@ export default function ListingModal({ show, onHide }) {
                 other: state?.serviceDescriptions?.other || ''
             });
 
-            // Set services with null fallbacks
+            
             setServices({
                 art: state.services?.art || false,
                 music: state.services?.music || false,
@@ -83,6 +83,11 @@ export default function ListingModal({ show, onHide }) {
                 sports: state.services?.sports || false,
                 other: state.services?.other || false
             });
+
+            // Restore checkbox values
+            setAcceptTerms(state.acceptTerms || false);
+            setHasLicense(state.hasLicense || false);
+            setSelectedCategory(state.selectedCategory || '');
         }
     }, [show]);
 
@@ -131,7 +136,6 @@ export default function ListingModal({ show, onHide }) {
         }
     }, [errors]);
 
-    // Reset all states when modal is closed
     useEffect(() => {
         if (!show) {
             const savedState = localStorage.getItem('listingFormState');
@@ -193,9 +197,9 @@ export default function ListingModal({ show, onHide }) {
         }
 
         // Mobile number validation
-        const phoneRegex = /^[0-9]{10}$/;
+        const phoneRegex = /^\d+$/;
         if (formData.contact && !phoneRegex.test(formData.contact)) {
-            newErrors.contact = 'Enter a valid 10-digit number';
+            newErrors.contact = 'Contact number must contain only digits';
         }
 
         // Service textarea validation
@@ -213,6 +217,10 @@ export default function ListingModal({ show, onHide }) {
         setErrors(newErrors);
 
         if (Object.keys(newErrors).length > 0) {
+            // Show validation errors as toast messages
+            Object.values(newErrors).forEach((msg, i) => {
+                setTimeout(() => toast.error(msg), i * 100);
+            });
             return; // Just return if there are validation errors
         }
 
@@ -236,11 +244,21 @@ export default function ListingModal({ show, onHide }) {
                 body: JSON.stringify(payload),
             });
 
-            if (!res.ok) throw new Error('Failed to send');
+            if (!res.ok) {
+                const errorData = await res.json();
+                throw new Error(errorData.error || 'Failed to submit form');
+            }
+            
+            // Show success toast
+            toast.success('Form submitted successfully');
             setSubmitted(true);
+            
+            // Clear localStorage after successful submission
+            localStorage.removeItem('listingFormState');
+            
         } catch (err) {
             console.error('Send failed', err);
-            toast.error('Something went wrong. Please try again.');
+            toast.error(err.message || 'Something went wrong. Please try again.');
         } finally {
             setLoading(false);
         }
@@ -428,6 +446,7 @@ export default function ListingModal({ show, onHide }) {
                                             className={styles.formInput}
                                             type="text"
                                             name="businessId"
+                                            value={formData.businessId}
                                             placeholder="Provide Business/Freelancer/license number"
                                             onChange={handleChange}
                                         />
@@ -441,6 +460,7 @@ export default function ListingModal({ show, onHide }) {
                                             className={styles.formInput}
                                             type="text"
                                             name="socialMediaLink"
+                                            value={formData.socialMediaLink}
                                             placeholder="Provide Instagram/Facebook/Link"
                                             onChange={handleChange}
                                         />
