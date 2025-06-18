@@ -23,8 +23,8 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Hobbeeme",
-  description: "It was showing Hobbeeme - UAE's First of its kind Hobby Marketplace App",
+  title: "Hobbeeme - UAE's First of its kind Hobby Marketplace App",
+  description: "",
 };
 
 export default function RootLayout({ children }) {
